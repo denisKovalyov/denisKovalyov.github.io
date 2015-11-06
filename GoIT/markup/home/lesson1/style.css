@@ -1,0 +1,15 @@
+body { background: #eeeeee; font-family: "Times New Roman", serif; font-size: 18px;}
+.content {position: relative; margin: 0 auto; padding: 53px 49px 69px; width: 513px; height: 751px; background-color: white; box-shadow: 0 0 2px 1px silver;}
+.fio {margin: 0 auto; padding-bottom: 21px; border-bottom: 1px solid gray; text-align: center;}
+h1 {font-family: "Times New Roman", serif; font-size: 24px; margin:0 0 27px; }
+img {display: inline-block; margin-bottom: 19px;}
+p {margin: 0; }
+.front-end {margin: 0; padding: 29px 0 20px 15px; border-bottom: 1px solid gray; }
+ul {margin: 0;}
+li {margin: 8px 0 0; }
+li:first-child {margin-top: 35px;}
+.contacts{margin: 0 auto; padding: 29px 0 20px 15px; border-bottom: 1px solid gray;}
+.margin-top {margin-top: 38px;}
+a:hover, a:visited, a:active, a:focus {color: blue;}
+.feedback {margin: 0 auto; padding: 29px 0 20px 15px; }
+.p_margin {margin-top: 7px;}
