@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	background: white;
+}
+
+.global {
+	width: 1060px;
+	margin: 0 auto;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+	-moz-box-shadow: 0 0 2px #dbdbdb;
+	-webkit-box-shadow: 0 0 2px #dbdbdb;
+	box-shadow: 0 0 2px #dbdbdb;
+}
+
+/*HEADER*/
+
+header {
+	padding-left: 45px;
+	padding-right: 48px;
+}
+
+.logo {
+	padding-top: 50px;
+	padding-bottom: 40px
+}
+
+header ul {
+	background: rgba(94,94,94,1);
+    background: -moz-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(94,94,94,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(94,94,94,1)), color-stop(100%, rgba(94,94,94,1)));
+    background: -webkit-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(94,94,94,1) 100%);
+    background: -o-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(94,94,94,1) 100%);
+    background: -ms-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(94,94,94,1) 100%);
+    background: linear-gradient(to right, rgba(94,94,94,1) 0%, rgba(94,94,94,1) 100%);
+	font-size:0;
+	line-height:0;
+	letter-spacing:-1px;
+}
+
+header li {
+	display: inline-block;
+	height: 40px;
+	line-height: 38px;
+	color: white;
+	font-size: 15px;
+	letter-spacing: normal;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 1px 1px 1px black;
+}
+
+header li:first-child {
+	width: 119px;
+	padding-left: 25px;
+
+}
+
+header li:nth-child(2) {
+	width: 75px;
+	padding-left: 25px;
+
+}
+
+header li:nth-child(3) {
+	width: 144px;
+	padding-left: 62px;
+
+}
+
+header li:nth-child(4) {
+	padding-left: 25px;
+
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+
+
+
+
+/*SIDEBAR*/
+
+/*CONTENT*/
+
+/*FOOTER*/
