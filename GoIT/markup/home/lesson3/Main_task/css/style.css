@@ -43,6 +43,7 @@ header li {
 	display: inline-block;
 	height: 40px;
 	line-height: 38px;
+	text-align: center;
 	color: white;
 	font-size: 15px;
 	letter-spacing: normal;
@@ -51,30 +52,48 @@ header li {
 }
 
 header li:first-child {
-	width: 119px;
-	padding-left: 25px;
-
+	width: 144px;
+	text-align: left;
 }
 
 header li:nth-child(2) {
-	width: 75px;
-	padding-left: 25px;
-
+	width: 100px;
 }
 
 header li:nth-child(3) {
-	width: 144px;
-	padding-left: 62px;
-
+	width: 206px;
 }
 
-header li:nth-child(4) {
-	padding-left: 25px;
-
+header li:last-child {
+	width: 116px;
+	text-align: left;
 }
-a {
+
+li a {
+	display: block;
+	height: 100%;
 	color: white;
 	text-decoration: none;
+}
+
+a.padding {
+	padding-left: 25px;
+}
+
+header li a:hover {
+	background: #2e2e2e;
+    background: -moz-linear-gradient(left, #2e2e2e 0%, #4a4a4a 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2e2e2e), color-stop(100%, #4a4a4a));
+    background: -webkit-linear-gradient(left, #2e2e2e 0%, #4a4a4a 100%);
+    background: -o-linear-gradient(left, #2e2e2e 0%, #4a4a4a 100%);
+    background: -ms-linear-gradient(left, #2e2e2e 0%, #4a4a4a 100%);
+    background: linear-gradient(to right, #2e2e2e 0%, #4a4a4a 100%);
+    border-left: 1px solid #838383;
+	border-right: 1px solid #838383;
+}
+
+a.padding:hover {
+	padding-left: 24px;
 }
 
 
