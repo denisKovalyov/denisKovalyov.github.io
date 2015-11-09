@@ -5,8 +5,10 @@ body {
 }
 
 .global {
-	width: 1060px;
+	width: 967px;
 	margin: 0 auto;
+	padding-left: 45px;
+	padding-right: 48px;
 	border-left: 1px solid #dbdbdb;
 	border-right: 1px solid #dbdbdb;
 	-moz-box-shadow: 0 0 2px #dbdbdb;
@@ -15,11 +17,6 @@ body {
 }
 
 /*HEADER*/
-
-header {
-	padding-left: 45px;
-	padding-right: 48px;
-}
 
 .logo {
 	padding-top: 50px;
@@ -44,10 +41,10 @@ header li {
 	height: 40px;
 	line-height: 38px;
 	text-align: center;
-	color: white;
-	font-size: 15px;
 	letter-spacing: normal;
+	color: white;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
 	text-shadow: 1px 1px 1px black;
 }
 
@@ -69,7 +66,7 @@ header li:last-child {
 	text-align: left;
 }
 
-li a {
+header li a {
 	display: block;
 	height: 100%;
 	color: white;
@@ -96,11 +93,66 @@ a.padding:hover {
 	padding-left: 24px;
 }
 
-
-
-
 /*SIDEBAR*/
 
+aside {
+	width: 240px;
+	margin-right: 48px;
+	padding-top: 40px;
+	float: left;
+}
+
+aside ul {
+	border: 1px solid #c8c8c8;
+}
+
+aside ul li {
+	height: 39px;
+	line-height: 39px; 
+	border-bottom: 1px solid #c8c8c8;
+}
+
+aside ul li:last-child {
+	border-bottom: none;
+}
+
+aside li a {
+	display: block;
+	padding-left: 23px;
+	color: #656363;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+aside li a:hover {
+	padding-left: 35px;
+	background: #f9f9f9;
+	color: #2c2c2c;
+}
+
 /*CONTENT*/
+
+article {
+	float: right;
+	padding-top: 40px;
+}
+
+article img {
+	padding: 46px 88px;
+	border: 1px solid #c8c8c8;
+}
+
+article p {
+	width: 616px;
+	padding-right: 25px;
+	padding-left: 30px;
+	margin-top: 40px;
+	margin-bottom: 63px;
+	line-height: 21px;
+	color: #2c2c2c;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+}
 
 /*FOOTER*/
