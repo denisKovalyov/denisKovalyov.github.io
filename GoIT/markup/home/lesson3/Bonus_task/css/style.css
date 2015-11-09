@@ -9,7 +9,6 @@ body {
 
 .body {
 	width: 960px;
-	height: 960px; /* DELETE THIS PROPERTY!!!!!!!!*/
 	margin: 0 auto;
 	background: url(../img/bg.jpg) no-repeat;
 }
@@ -85,3 +84,10 @@ a:visited {
 
 /*FOOTER*/
 
+footer {
+	margin: 159px 0 30px;
+	text-align: center;
+	color: #e6e6e6;
+	font-family: 'Tahoma', serif;
+	font-size: 10px;
+}
