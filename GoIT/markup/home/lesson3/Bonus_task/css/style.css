@@ -17,7 +17,7 @@ body {
 /*HEADER*/
 
 header {
-	padding: 57px 73px 0 70px;
+	padding: 57px 72px 0 70px;
 }
 
 .logo {
@@ -42,8 +42,46 @@ header p span {
 	font-size: 8px;
 }
 
-
-
 /*CONTENT*/
+
+.content {
+	clear: both;
+	padding: 0 72px 0 70px;
+}
+
+.content img {
+	vertical-align: bottom;
+}
+
+
+.content a,
+a:visited {
+	display: inline-block;
+	width: 270px;
+	line-height: 10px;
+	text-align: center;
+	color: #e6e6e6;
+	text-decoration: none;
+	font-family: 'Tahoma', serif;
+	font-size: 15px;
+
+}
+
+.content a:hover {
+	font-size: 17px;
+	color: #e6e6e6;
+	text-decoration: none;
+}
+
+.content a:active,
+.content a:focus {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+
+.content a:nth-child(4) {
+	margin-top: 50px;
+}
+
 /*FOOTER*/
 
