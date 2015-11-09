@@ -9,7 +9,6 @@ body {
 
 .body {
 	width: 960px;
-	height: 960px; /* DELETE THIS PROPERTY!!!!!!!!*/
 	margin: 0 auto;
 	background: url(../img/bg.jpg) no-repeat;
 }
@@ -24,7 +23,6 @@ header {
 	float: left;
 	width: 266px; 
 	height: 147px;
-	background: url(../img/logo.png) no-repeat;
 }
 
 header p {
@@ -68,8 +66,8 @@ a:visited {
 }
 
 .content a:hover {
-	font-size: 17px;
 	color: #e6e6e6;
+	font-weight: bold;
 	text-decoration: none;
 }
 
@@ -85,3 +83,11 @@ a:visited {
 
 /*FOOTER*/
 
+footer {
+	margin: 159px 0 30px;
+
+	text-align: center;
+	color: #e6e6e6;
+	font-family: 'Tahoma', serif;
+	font-size: 10px;
+}
