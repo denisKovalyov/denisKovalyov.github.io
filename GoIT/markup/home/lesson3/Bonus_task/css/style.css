@@ -1,0 +1,49 @@
+body {
+	background: -moz-radial-gradient(center, ellipse cover, #181818 0%, #000000 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #181818), color-stop(100%, #000000)); /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #181818 0%, #000000 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #181818 0%, #000000 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #181818 0%, #000000 100%); /* ie10+ */
+    background: radial-gradient(ellipse closest-side at center, #181818 0%, #000000 100%); /* w3c */ 
+}
+
+.body {
+	width: 960px;
+	height: 960px; /* DELETE THIS PROPERTY!!!!!!!!*/
+	margin: 0 auto;
+	background: url(../img/bg.jpg) no-repeat;
+}
+
+/*HEADER*/
+
+header {
+	padding: 57px 73px 0 70px;
+}
+
+.logo {
+	float: left;
+	width: 266px; 
+	height: 147px;
+	background: url(../img/logo.png) no-repeat;
+}
+
+header p {
+	float: right;
+	margin-top: 57px;
+	line-height: 15px;
+	color:#e6e6e6;
+	font-family: 'Tahoma', serif;
+	font-size: 10px;
+}
+
+header p span {
+	display: block;
+	line-height: 10px;
+	font-size: 8px;
+}
+
+
+
+/*CONTENT*/
+/*FOOTER*/
+
