@@ -1,0 +1,86 @@
+body {
+	background: #1289a7;
+	background: -moz-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #1289a7), color-stop(27%, #3bc0cf), color-stop(100%, #0c739f));
+	background: -webkit-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
+	background: -o-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
+	background: -ms-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
+	background: linear-gradient(to bottom, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
+	background-attachment: fixed;
+	font-family: 'Tahoma', serif;
+
+}
+
+.wholepage {
+	width: 1280px;
+	height: 800px; /* /delet!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	margin: 0 auto;
+	background: url(../img/bg.jpg) no-repeat;
+}
+
+/*HEADER*/
+
+header {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 10px 32px 0 29px;
+	background: white;
+	-webkit-box-shadow: 1px -3px 3px 3px rgba(137,162,165,0.75);
+	-moz-box-shadow: 1px -3px 3px 3px rgba(137,162,165,0.75);
+	box-shadow: 0px -3px 3px 3px rgba(137,162,165,0.75);;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+header p {
+	float: right;
+	line-height: 22px;
+	color: #128aa7;
+	font-size: 12px;
+}
+
+header p span {
+	display: block;
+	line-height: 15px;
+}
+
+.countries {
+	position: absolute;
+	right: 32px;
+	bottom: 0px;
+
+}
+
+.countries a {
+	display: inline-block;
+	width: 42px;
+	height: 57px;
+	margin-right: 5px;
+	line-height: 10px;
+	text-align: center;
+	color: #128aa7;
+	font-size: 10px;
+}
+
+.countries a:nth-child(5) {
+	width: 53px;
+	margin-right: 3px;
+}
+
+.countries a:last-child {
+	width: 50px;
+	margin: 0;
+}
+
+
+/*SIDEBAR*/
+
+
+
+/*FOOTER*/
+
