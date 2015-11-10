@@ -19,10 +19,8 @@ header {
 	padding: 57px 72px 0 70px;
 }
 
-.logo {
+img {
 	float: left;
-	width: 266px; 
-	height: 147px;
 }
 
 header p {
@@ -43,8 +41,13 @@ header p span {
 /*CONTENT*/
 
 .content {
-	clear: both;
 	padding: 0 72px 0 70px;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 .content img {
