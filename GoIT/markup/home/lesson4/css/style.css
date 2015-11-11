@@ -1,5 +1,5 @@
 body {
-	background: url(../img/bg.jpg) no-repeat;
+	background: url(../img/bg.jpg) no-repeat #0c739f;
 	font-family: 'Tahoma', serif;
 
 }
@@ -28,6 +28,15 @@ header {
 	clear: both;
 }
 
+.img {
+	float: left;
+	width: 283px;
+}
+
+.contacts {
+	float: right;
+}
+
 header p {
 	float: right;
 	line-height: 22px;
@@ -41,9 +50,9 @@ header p span {
 }
 
 .countries {
-	position: absolute;
-	right: 32px;
-	bottom: 8px;
+	clear: right;
+	float: right;
+	margin-top: 35px;
 }
 
 .countries a,
@@ -70,18 +79,13 @@ header p span {
 
 /*MENU*/
 
-.menu {
+.foto {
 	width: 1000px;
-	margin: 0 auto;
-	padding-top: 237px;
-	background: url(../img/foto.jpg) no-repeat;
+	height: 237px;
 }
 
 ul.navigation {	
-	float: left;
 	position: relative;
-	padding-left: 65px;
-	width: 935px;
 	z-index: 1;
 	line-height: 28px;
 	border-top: 1px solid #cacbcb;
@@ -94,8 +98,12 @@ ul.navigation {
 
 .navigation>li{
 	float: left;
-	margin-right: 8px; 
+	margin-left: 9px; 
 	}
+
+.navigation>li:first-child {
+	margin-left: 50px;
+}
 
 
 .menu li span {
@@ -134,7 +142,7 @@ ul.navigation ul li {
 
 ul.navigation li:hover ul{
 	position: absolute;
-	top: 28px;
+	top: 30px;
 	opacity: 1;
 }	
 
