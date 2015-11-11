@@ -156,6 +156,12 @@ ul.navigation li ul a:visited {
 
 /*CONTENT*/
 
+.columns {
+	overflow: hidden;
+	border-right: 1px solid #c7cacf;
+	border-left: 1px solid #c7cacf;
+}
+
 .right_bg {
 	width: 100%;
 	float: left;
@@ -166,50 +172,62 @@ ul.navigation li ul a:visited {
 	width: 100%;
 	float: left;
 	position: relative;
-	right: 20%;
+	right: 22%;
 	background: white;
+	border-right: 1px solid #c7cacf;
 }
 
 .left_bg {
 	width: 100%;
 	float: left;
 	position: relative;
-	right: 60%;
+	right: 56%;
 	background: #edeef0;
+	border-right: 1px solid #c7cacf;
 }
 
 .left_content {
-	width: 20%;
+	width: 22%;
 	float: left;
-	left: 80%;
+	left: 78%;
 	position: relative;
+	box-sizing: border-box;
+	padding: 12px 24px 0 15px;
 	overflow: hidden;
 }
 
 .center_content {
-	width: 60%;
+	width: 56%;
 	float: left;
-	left: 80%;
+	left: 78%;
 	position: relative;
-	box-sizing: border-box;
-	border-left: 1px solid #c7cacf;
-	border-right: 10px solid #c7cacf;
 	border-bottom: 1px solid transparent;
 	overflow: hidden;
-
 }
 
-
 .right_content {
-	width: 20%;
+	width: 22%;
 	float: left;
-	left: 80%;
+	left: 78%;
+	box-sizing: border-box;
+	padding: 12px 24px 0 15px;
 	position: relative;
 	overflow: hidden;
 }
 
 
+h1 {
+	line-height: 1.5;
+	text-align: center;
+	color: #424c43;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.columns p {
+	line-height: 24px;
+	color: #424c43;
+	font-size: 14px;
+}
 
 /*FOOTER*/
-
-/*	*/
