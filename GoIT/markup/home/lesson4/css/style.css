@@ -107,6 +107,8 @@ ul.navigation {
 
 
 .menu li span {
+	display: inline-block;
+	vertical-align: top;
 	font-size: 8px;
 }
 
@@ -142,7 +144,7 @@ ul.navigation ul li {
 
 ul.navigation li:hover ul{
 	position: absolute;
-	top: 30px;
+	top: 28px;
 	opacity: 1;
 }	
 
