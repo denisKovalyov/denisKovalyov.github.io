@@ -13,6 +13,7 @@ body {
 	box-shadow: 0px -3px 3px 3px gray;
 }
 
+
 /*HEADER*/
 
 header {
@@ -74,6 +75,7 @@ header p span {
 	color: #0e86d0;
 	text-decoration: none;
 }
+
 
 /*MENU*/
 
@@ -152,5 +154,62 @@ ul.navigation li ul a:visited {
 }
 
 
+/*CONTENT*/
+
+.right_bg {
+	width: 100%;
+	float: left;
+	background: #edeef0;
+}
+
+.center_bg {
+	width: 100%;
+	float: left;
+	position: relative;
+	right: 20%;
+	background: white;
+}
+
+.left_bg {
+	width: 100%;
+	float: left;
+	position: relative;
+	right: 60%;
+	background: #edeef0;
+}
+
+.left_content {
+	width: 20%;
+	float: left;
+	left: 80%;
+	position: relative;
+	overflow: hidden;
+}
+
+.center_content {
+	width: 60%;
+	float: left;
+	left: 80%;
+	position: relative;
+	box-sizing: border-box;
+	border-left: 1px solid #c7cacf;
+	border-right: 10px solid #c7cacf;
+	border-bottom: 1px solid transparent;
+	overflow: hidden;
+
+}
+
+
+.right_content {
+	width: 20%;
+	float: left;
+	left: 80%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
 /*FOOTER*/
 
+/*	*/
