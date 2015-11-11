@@ -1,5 +1,5 @@
 body {
-	background: url(../img/bg.jpg) no-repeat #0c739f;
+	background: url(../img/bg.jpg) repeat-x #0c739f;
 	font-family: 'Tahoma', serif;
 
 }
@@ -149,7 +149,6 @@ ul.navigation li:hover ul{
 ul.navigation li ul a,
 ul.navigation li ul a:visited {
 	display: block;
-
 }
 
 .navigatin a:active,
