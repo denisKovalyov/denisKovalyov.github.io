@@ -84,6 +84,37 @@ header p span {
 	background: url(../img/foto.jpg) no-repeat;
 }
 
+ul.navigation {	
+	float: left;
+	line-height: 28px;
+	padding: 0 19px;
+	border-top: 1px solid #cacbcb;
+	border-bottom: 1px solid black;
+	background: #323232;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(79,79,80,1);
+	-moz-box-shadow: 0px 1px 4px 0px rgba(79,79,80,1);
+	box-shadow: 0px 1px 4px 0px rgba(79,79,80,1);
+
+}
+
+.navigation li{
+	float: left;
+	}
+
+.navigation a,
+.navigation a:visited {
+	display: block;
+	padding: 0 36px;
+
+	color: white;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+ul.navigation ul {
+	position: absolute;
+	left: -9999px;
+}
 
 /*FOOTER*/
 
