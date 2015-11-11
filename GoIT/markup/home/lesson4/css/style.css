@@ -1,5 +1,5 @@
 body {
-background: url(../img/bg.jpg) no-repeat;
+	background: url(../img/bg.jpg) no-repeat;
 	font-family: 'Tahoma', serif;
 
 }
@@ -58,12 +58,12 @@ header p span {
 	font-size: 10px;
 }
 
-.countries a:nth-child(5) {
+.countries a:nth-child(5) {		/*Шри-Ланка шире других значков*/
 	width: 53px;
 	margin-right: 3px;
 }
 
-.countries a:last-child {
+.countries a:last-child {		/*Мальдивы тоже слегка шире*/
 	width: 50px;
 	margin: 0;
 }
@@ -86,35 +86,71 @@ header p span {
 
 ul.navigation {	
 	float: left;
+	position: relative;
+	padding-left: 7px;
+	padding-right: 10px;
 	line-height: 28px;
-	padding: 0 19px;
 	border-top: 1px solid #cacbcb;
 	border-bottom: 1px solid black;
 	background: #323232;
 	-webkit-box-shadow: 0px 1px 4px 0px rgba(79,79,80,1);
 	-moz-box-shadow: 0px 1px 4px 0px rgba(79,79,80,1);
 	box-shadow: 0px 1px 4px 0px rgba(79,79,80,1);
-
 }
 
-.navigation li{
+.navigation>li{
 	float: left;
+	margin-left: 22px;
 	}
 
 .navigation a,
 .navigation a:visited {
 	display: block;
-	padding: 0 36px;
-
+	padding: 0 43px 0 10px;
 	color: white;
 	font-size: 14px;
 	text-decoration: none;
 }
 
+.navigation a:hover {
+	color: #0e86d0;
+	text-decoration: none;
+}
+
 ul.navigation ul {
 	position: absolute;
-	left: -9999px;
+	top: -9999px;
+	background: #323232;
+	border-top: 1px solid black;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,1);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,1);
+	opacity:0; 
+	-webkit-transition:0.25s linear opacity;
 }
+
+ul.navigation ul li {
+	float: none;
+}
+
+ul.navigation li:hover ul{
+	position: absolute;
+	top: 28px;
+	opacity: 1;
+}	
+
+ul.navigation li ul a,
+ul.navigation li ul a:visited {
+	display: block;
+
+}
+
+.navigatin a:active,
+.navigation a:focus {
+	color: white;
+	text-decoration: none;
+}
+
 
 /*FOOTER*/
 
