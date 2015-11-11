@@ -8,9 +8,9 @@ body {
 	width: 1000px;
 	margin: 0 auto;
 	background: white;
-	-webkit-box-shadow: 1px -3px 3px 3px gray;
-	-moz-box-shadow: 1px -3px 3px 3px gray;
-	box-shadow: 0px -3px 3px 3px gray;
+	-webkit-box-shadow: 1px 3px 3px 3px black;
+	-moz-box-shadow: 1px 1px 3px 1px black;
+	box-shadow: 0px 1px 5px 1px black;
 }
 
 
@@ -44,14 +44,11 @@ header p span {
 	position: absolute;
 	right: 32px;
 	bottom: 8px;
-
 }
 
 .countries a,
 .countries a:visited {
 	display: inline-block;
-	width: 42px;
-	height: 57px;
 	margin-right: 5px;
 	line-height: 10px;
 	text-align: center;
@@ -59,14 +56,8 @@ header p span {
 	font-size: 10px;
 }
 
-.countries a:nth-child(5) {		/*Шри-Ланка шире других значков*/
-	width: 53px;
-	margin-right: 3px;
-}
-
-.countries a:last-child {		/*Мальдивы тоже слегка шире*/
-	width: 50px;
-	margin: 0;
+.countries a span {
+	display: block;
 }
 
 .countries a:hover,
@@ -89,8 +80,9 @@ header p span {
 ul.navigation {	
 	float: left;
 	position: relative;
-	padding-left: 7px;
-	padding-right: 10px;
+	padding-left: 65px;
+	width: 935px;
+	z-index: 1;
 	line-height: 28px;
 	border-top: 1px solid #cacbcb;
 	border-bottom: 1px solid black;
@@ -102,8 +94,13 @@ ul.navigation {
 
 .navigation>li{
 	float: left;
-	margin-left: 22px;
+	margin-right: 8px; 
 	}
+
+
+.menu li span {
+	font-size: 8px;
+}
 
 .navigation a,
 .navigation a:visited {
@@ -192,7 +189,7 @@ ul.navigation li ul a:visited {
 	left: 78%;
 	position: relative;
 	box-sizing: border-box;
-	padding: 12px 24px 0 15px;
+	padding: 12px 24px 12px 15px;
 	overflow: hidden;
 }
 
@@ -210,7 +207,7 @@ ul.navigation li ul a:visited {
 	float: left;
 	left: 78%;
 	box-sizing: border-box;
-	padding: 12px 24px 0 15px;
+	padding: 12px 24px 12px 15px;
 	position: relative;
 	overflow: hidden;
 }
@@ -230,4 +227,17 @@ h1 {
 	font-size: 14px;
 }
 
+
 /*FOOTER*/
+
+footer {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+p {
+	line-height: 24px;
+	text-align: center;
+	color: white;
+	font-size: 12px;
+}
