@@ -1,20 +1,7 @@
 body {
-	background: #1289a7;
-	background: -moz-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, #1289a7), color-stop(27%, #3bc0cf), color-stop(100%, #0c739f));
-	background: -webkit-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
-	background: -o-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
-	background: -ms-linear-gradient(top, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
-	background: linear-gradient(to bottom, #1289a7 0%, #3bc0cf 27%, #0c739f 100%);
-	background-attachment: fixed;
+background: url(../img/bg.jpg) no-repeat;
 	font-family: 'Tahoma', serif;
 
-}
-
-.wholepage {
-	width: 1280px;
-	margin: 0 auto;
-	background: url(../img/bg.jpg) no-repeat;
 }
 
 .shadow_box {
@@ -93,7 +80,7 @@ header p span {
 .menu {
 	width: 1000px;
 	margin: 0 auto;
-	height: 302px;
+	padding-top: 237px;
 	background: url(../img/foto.jpg) no-repeat;
 }
 

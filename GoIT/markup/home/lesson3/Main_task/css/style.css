@@ -7,10 +7,10 @@ body {
 .global {
 	width: 967px;
 	margin: 0 auto;
-	padding-left: 45px;
-	padding-right: 48px;
+	padding: 0 48px 60px 45px;
 	border-left: 1px solid #dbdbdb;
 	border-right: 1px solid #dbdbdb;
+	background: white;
 	-moz-box-shadow: 0 0 2px #dbdbdb;
 	-webkit-box-shadow: 0 0 2px #dbdbdb;
 	box-shadow: 0 0 2px #dbdbdb;
@@ -122,7 +122,6 @@ aside li a:hover {
 .img {
 	padding: 46px 88px;
 	border: 1px solid #c8c8c8;
-	background: white;
 }
 
 .content p {
