@@ -12,6 +12,7 @@
 }
 
 /*GENERAL PROPERTIES*/
+
 body {
 	background: fixed url(../img/bg.jpg) center top;
 	background-size: cover;
@@ -36,7 +37,7 @@ header {
 	font-size: 14px;
 }
 
-.entrance li {
+.menu li {
 	float: right;
 	margin-right: 20px;
 	line-height: 36px;
@@ -56,6 +57,7 @@ header {
 }
 
 .entrance a span {
+	color: #feffff;
 	text-decoration: underline;
 }
 
@@ -69,6 +71,21 @@ a.flag:hover {
 	color: #4ca8d9;
 	background: url(../img/flag_hover.png) no-repeat;
 	background-position: left center;
+}
+
+
+.nav li a,
+.nav li a:visited {
+	display: block;
+	padding: 0 10px 0 14px;
+	color: #60b5ed;
+	text-decoration: none;
+}
+
+.nav li a:hover {
+	color: white;
+	background: #4eabda;
+	text-decoration: none;
 }
 
 
