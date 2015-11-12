@@ -43,10 +43,6 @@ header {
 	line-height: 36px;
 }
 
-.entrance li:first-child {
-	background: url(../img/enter.png);
-}
-
 
 .entrance a,
 .entrance a:visited {
@@ -61,18 +57,36 @@ header {
 	text-decoration: underline;
 }
 
-a.flag {
-	padding-left: 52px;
+.entrance li:last-child {
+	position: relative;
+	padding-left: 51px;
 	background: url(../img/flag.png) no-repeat;
-	background-position: left center;
+	background-position: 19px center; 
 }
 
-a.flag:hover {
-	color: #4ca8d9;
-	background: url(../img/flag_hover.png) no-repeat;
-	background-position: left center;
+.entrance li:last-child:before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 32px;
+	width: 1px;
+	background: #56a2dc;
 }
 
+.entrance a:hover {
+	line-height: 34px;
+	padding: 0 12px;
+	border: 1px solid #4299d2;
+	border-radius: 1px;
+	background: rgba(78,171,218,1);
+	background: -moz-linear-gradient(top, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(78,171,218,1)), color-stop(100%, rgba(46,121,196,1)));
+	background: -webkit-linear-gradient(top, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
+	background: -o-linear-gradient(top, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
+	background: -ms-linear-gradient(top, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
+	background: linear-gradient(to bottom, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
+}
 
 .nav li a,
 .nav li a:visited {
@@ -89,5 +103,52 @@ a.flag:hover {
 }
 
 
-
 /*FORM*/
+
+.form {
+	width: 560px;
+	height: 615px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -307px;
+	margin-left: -280px;
+}
+
+.form_header {
+	margin-bottom: 1px;
+	line-height: 62px;
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 24px;
+	text-align: center;
+}
+
+.form_body {
+	padding: 36px 142px 22px;
+	background-color: rgba(0,0,0,0.4);
+	text-align: center;
+}
+
+.facebook {
+	background: rgba(58,86,156,1);
+	background: -moz-linear-gradient(left, rgba(58,86,156,1) 0%, rgba(53,77,139,1) 20%, rgba(54,77,142,1) 50%, rgba(49,73,131,1) 80%, rgba(52,76,136,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(58,86,156,1)), color-stop(20%, rgba(53,77,139,1)), color-stop(50%, rgba(54,77,142,1)), color-stop(80%, rgba(49,73,131,1)), color-stop(100%, rgba(52,76,136,1)));
+	background: -webkit-linear-gradient(left, rgba(58,86,156,1) 0%, rgba(53,77,139,1) 20%, rgba(54,77,142,1) 50%, rgba(49,73,131,1) 80%, rgba(52,76,136,1) 100%);
+	background: -o-linear-gradient(left, rgba(58,86,156,1) 0%, rgba(53,77,139,1) 20%, rgba(54,77,142,1) 50%, rgba(49,73,131,1) 80%, rgba(52,76,136,1) 100%);
+	background: -ms-linear-gradient(left, rgba(58,86,156,1) 0%, rgba(53,77,139,1) 20%, rgba(54,77,142,1) 50%, rgba(49,73,131,1) 80%, rgba(52,76,136,1) 100%);
+	background: linear-gradient(to right, rgba(58,86,156,1) 0%, rgba(53,77,139,1) 20%, rgba(54,77,142,1) 50%, rgba(49,73,131,1) 80%, rgba(52,76,136,1) 100%);
+	border-radius: 3px;
+}
+
+.facebook span {
+	padding: 0 15px;
+	float: left;
+}
+
+.facebook a {
+	color: white;
+	font-weight: bold;
+	font-family: Tahoma;
+	text-decoration: none;
+}
