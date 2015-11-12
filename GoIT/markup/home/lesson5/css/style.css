@@ -1,0 +1,76 @@
+/*FONT*/
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('helveticaneuecyr-light-webfont.eot');
+    src: url('helveticaneuecyr-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneuecyr-light-webfont.woff2') format('woff2'),
+         url('helveticaneuecyr-light-webfont.woff') format('woff'),
+         url('helveticaneuecyr-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*GENERAL PROPERTIES*/
+body {
+	background: fixed url(../img/bg.jpg) center top;
+	background-size: cover;
+	font-family: 'Helvetica Neue Light', Tahoma, Arial, sans-serif;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*HEADER*/
+
+header {
+	background: url(../img/header_bg.jpg) no-repeat;
+}
+
+.menu {
+	width: 1215px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+
+.entrance li {
+	float: right;
+	margin-right: 20px;
+	line-height: 36px;
+}
+
+.entrance li:first-child {
+	background: url(../img/enter.png);
+}
+
+
+.entrance a,
+.entrance a:visited {
+	display: block;
+	padding: 0 13px;
+	color: white;
+	text-decoration: none;
+}
+
+.entrance a span {
+	text-decoration: underline;
+}
+
+a.flag {
+	padding-left: 52px;
+	background: url(../img/flag.png) no-repeat;
+	background-position: left center;
+}
+
+a.flag:hover {
+	color: #4ca8d9;
+	background: url(../img/flag_hover.png) no-repeat;
+	background-position: left center;
+}
+
+
+
+/*FORM*/
