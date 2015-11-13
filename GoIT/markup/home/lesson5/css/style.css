@@ -13,8 +13,13 @@
 
 /*GENERAL PROPERTIES*/
 
+html {
+	height: 100%;
+}
+
 body {
-	background: fixed url(../img/bg.jpg) center top;
+	height: 100%;
+	background: fixed url(../img/bg.jpg) center top ;
 	background-size: cover;
 	font-family: 'Helvetica Neue Light', Tahoma, Arial, sans-serif;
 }
@@ -28,16 +33,14 @@ body {
 /*HEADER*/
 
 header {
+	position: fixed;
+	left: 0;
+	right: 0;
 	background: url(../img/header_bg.jpg) no-repeat;
-}
-
-.menu {
-	width: 1215px;
-	margin: 0 auto;
 	font-size: 14px; 
 }
 
-.menu ul {
+header ul {
 	float: right;
 	margin-right: 20px;
 	line-height: 36px;
@@ -115,15 +118,25 @@ img {
 
 /*FORM*/
 
+.content {
+	display: table;
+	margin: 0 auto;
+	height: 100%;
+	background: navy;
+}
+
 .form {
+	background: green;
+	display: table-cell;
+	vertical-align: middle;
 	width: 560px;
-	height: 615px;
-	position: absolute;
+	/*	position: absolute;  		Еще один вариант центрирования формы - форма перекрывает главное меню если браузер открыт во окне не на весь экран!
 	top: 50%;
 	left: 50%;
 	margin-top: -307px;
-	margin-left: -280px;
+	margin-left: -280px;*/
 }
+
 
 .form_header {
 	margin-bottom: 1px;
