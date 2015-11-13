@@ -34,50 +34,61 @@ header {
 .menu {
 	width: 1215px;
 	margin: 0 auto;
-	font-size: 14px;
+	font-size: 14px; 
 }
 
-.menu li {
+.menu ul {
 	float: right;
 	margin-right: 20px;
 	line-height: 36px;
+	color: white;
 }
 
+.nav li,
+img {
+	float: left;
+}
 
-.entrance a,
-.entrance a:visited {
+.nav img {
+	margin-right: 10px;
+}
+
+.nav a,
+.nav a:visited {
 	display: block;
-	padding: 0 13px;
-	color: white;
+	padding: 0 14px;
+	color: #60b5ed;
 	text-decoration: none;
 }
 
-.entrance a span {
-	color: #feffff;
+.nav a:hover {
+	color: white;
+	background: #4eabda;
+}
+
+
+.flag a,
+.flag a:visited {
+	display: inline-block;
+	padding: 0;
+	color: white;
+}
+
+.flag a:hover {
+	background: none;
 	text-decoration: underline;
 }
 
-.entrance li:last-child {
-	position: relative;
-	padding-left: 51px;
-	background: url(../img/flag.png) no-repeat;
-	background-position: 19px center; 
+.flag {
+	padding: 0 14px;
 }
 
-.entrance li:last-child:before {
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 0;
-	height: 32px;
-	width: 1px;
-	background: #56a2dc;
-}
-
-.entrance a:hover {
-	line-height: 34px;
-	padding: 0 12px;
-	border: 1px solid #4299d2;
+.flag:hover {
+	line-height: 35px;
+	padding: 0 13px;
+	border-right: 1px solid #4299d2;
+	border-left: 1px solid #4299d2;
+	border-bottom: 1px solid #4299d2;
 	border-radius: 1px;
 	background: rgba(78,171,218,1);
 	background: -moz-linear-gradient(top, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
@@ -88,20 +99,19 @@ header {
 	background: linear-gradient(to bottom, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
 }
 
-.nav li a,
-.nav li a:visited {
-	display: block;
-	padding: 0 10px 0 14px;
-	color: #60b5ed;
-	text-decoration: none;
+.nav li:nth-child(6) {
+	position: relative;
 }
 
-.nav li a:hover {
-	color: white;
-	background: #4eabda;
-	text-decoration: none;
+.nav li:nth-child(6):before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: -1px;
+	height: 32px;
+	width: 1px;
+	background: #56a2dc;
 }
-
 
 /*FORM*/
 
