@@ -27,19 +27,39 @@
 
 		<div class="form">
 
-		<div class="form_header">
-			<h1>Cadastre-se</h1>
-		</div>
+		<h1>Cadastre-se</h1>
 
 		<div class="form_body">
 			
 			<div class="facebook clearfix">
-			<a href="#"><span><img src="img/facebook.png" alt="facebook" title="facebook"></span><span>Log In <span>with</span> Facebook</span></a>
+			<a href="#"><img src="img/facebook.png" alt="facebook" title="facebook"><span class="text">Log In <span>with</span> Facebook</span></a>
 			</div>
 			
 			<p> OU </p>
+			
+			<form action="#" method="#">
+			
+			<input type="text" name="firstname" id="firstname" placeholder="First Name" required>
 
+			<input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+			
+			<input type="email" name="email" id="email" placeholder="Email Address" required>
 
+			<input type="password" name="password" id="password" placeholder="Choose Password" required>
+
+			<input type="password" name="password_conf" id="password_conf" placeholder="Password Confirm" required>
+			
+			<div class="checkbox clearfix">
+			
+				<input type="checkbox" name="subscription" id="subscription" value="true">
+				<label for="subscription">Send me Youbike updates and tips</label>
+			
+			</div>
+			
+			<input type="button" value="Create my Account">
+
+			</form>
+			
 		</div>
 
 		</div>
