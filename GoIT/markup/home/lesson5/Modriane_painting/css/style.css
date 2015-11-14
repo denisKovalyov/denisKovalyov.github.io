@@ -1,0 +1,53 @@
+body {
+	width: 780px;
+	margin: 0 auto;
+}
+
+div {
+	height: 890px;
+	margin-top: -20px;
+	overflow: hidden;
+}
+
+/* TABLE */
+
+table {
+	background-image: url(../img/bg.png);
+	background-position: 10px;
+	background-repeat: repeat-y;
+	border-spacing: 10px;
+}
+
+tr {
+	height: 100px;
+}
+
+td {
+	width: 100px;
+	height: 100px;
+	border: none;
+}
+
+tr.slim td, tr.slim  {
+	height: 50px;
+}
+
+.white {
+	background: url(../img/white.png) repeat;
+}
+
+.yellow {
+	background: url(../img/yellow.png) repeat;
+}
+
+.red {
+	background: url(../img/red.png) repeat;
+}
+
+.blue {
+	background: url(../img/blue.png) repeat;
+}
+
+.black {
+	background: url(../img/black.png) repeat;
+}
