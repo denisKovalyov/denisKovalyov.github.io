@@ -1,36 +1,54 @@
 body {
 	width: 780px;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 
-div {
-	height: 890px;
-	margin-top: -20px;
-	overflow: hidden;
-}
 
 /* TABLE */
 
 table {
-	background-image: url(../img/bg.png);
+/*	background-image: url(../img/bg.png);
 	background-position: 10px;
-	background-repeat: repeat-y;
-	border-spacing: 10px;
+	background-repeat: repeat-y;*/
 }
 
 tr {
-	height: 100px;
+	height: 90px;
 }
 
 td {
-	width: 100px;
-	height: 100px;
-	border: none;
+	width: 90px;
+	height: 90px;
+	border-style: solid;
+	border-width: 7px;
+	border-image: url(../img/border.png) 10 10 repeat;
 }
 
 tr.slim td, tr.slim  {
 	height: 50px;
 }
+
+.top td {
+	border-top-width: 0;
+
+}
+
+td:last-child {						/*cancel right border*/
+	border-right-width: 0;
+}
+
+.left {					
+	border-left-width: 0;
+}
+
+.bottom {
+	border-bottom-width: 0;
+}
+
+.invisible td {					/*hiding the last row*/
+	border: none;
+}
+
 
 .white {
 	background: url(../img/white.png) repeat;

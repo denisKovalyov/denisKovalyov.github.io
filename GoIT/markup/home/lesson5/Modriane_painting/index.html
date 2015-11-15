@@ -8,15 +8,15 @@
 </head>
 
 <body>
-	<div>
+
 <table>
-	<tr>
-		<td colspan="2" class="white"></td>
+	<tr class="top">
+		<td colspan="2" class="white left"></td>
 		<td colspan="3" class="white"></td>
 		<td colspan="2" class="yellow"></td>
 	</tr>	
 	<tr>
-		<td rowspan="2" class="white"></td>
+		<td rowspan="2" class="white left"></td>
 		<td colspan="4" rowspan="4" class="red"></td>
 		<td colspan="2" rowspan="2" class="yellow"></td>
 	</tr>
@@ -24,7 +24,7 @@
 		<!-- empty row	 -->	
 	</tr>
 	<tr>
-		<td rowspan="3" class="white"></td>
+		<td rowspan="3" class="white left"></td>
 		<td rowspan="2" class="white"></td>
 		<td rowspan="2" class="white"></td>
 	</tr>
@@ -38,20 +38,21 @@
 		<td colspan="2" class="white"></td>
 	</tr>
 	<tr>
-		<td rowspan="3" class="yellow"></td>
+		<td rowspan="3" class="yellow bottom left"></td>
 		<td class="black"></td>
 		<td class="black"></td>
 		<td colspan="2" class="white"></td>
 		<td colspan="2" rowspan="2" class="blue"></td>
 	</tr>
 	<tr class="slim">
-		<td colspan="2" rowspan="2" class="white"></td>
+		<td colspan="2" rowspan="2" class="white bottom"></td>
 		<td colspan="2" class="black"></td>	
 	</tr>
 	<tr class="slim">		
-		<td colspan="4" class="white"></td>
+		<td colspan="4" class="white bottom"></td>
 	</tr>
-	<tr>		
+	<tr class="invisible">	
+		<!-- this empty row was added in order to prevent collapsing of the 5th colomn	 -->
 		<td></td>
 		<td></td>
 		<td></td>
@@ -61,7 +62,7 @@
 		<td></td>
 	</tr>
 </table>
-	</div>
+
 
 </body>
 </html>
