@@ -19,6 +19,7 @@ html {
 
 body {
 	display: table;
+	border-spacing: 0 150px;
 	margin: 0 auto;
 	height: 100%;
 	background: fixed url(../img/bg.jpg) center top ;
@@ -38,13 +39,13 @@ header {
 	position: fixed;
 	left: 0;
 	right: 0;
+	top: 0;
 	background: url(../img/header_bg.jpg) no-repeat;
 	font-size: 14px; 
 }
 
 header ul {
 	float: right;
-	margin-right: 20px;
 	line-height: 36px;
 	color: white;
 }
@@ -71,24 +72,14 @@ img {
 	background: #4eabda;
 }
 
-
-.flag a,
-.flag a:visited {
-	display: inline-block;
-	padding: 0;
+.flag {
+	float: right;
+	margin-right: 20px;
+	line-height: 36px;
 	color: white;
 }
 
-.flag a:hover {
-	background: none;
-	text-decoration: underline;
-}
-
-.flag {
-	padding: 0 14px;
-}
-
-.flag:hover {
+.flag:first-child {
 	line-height: 35px;
 	padding: 0 13px;
 	border-right: 1px solid #4299d2;
@@ -104,18 +95,45 @@ img {
 	background: linear-gradient(to bottom, rgba(78,171,218,1) 0%, rgba(46,121,196,1) 100%);
 }
 
-.nav li:nth-child(6) {
+.flag a,
+.flag a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+.flag:first-child a,
+.flag:first-child a:visited {
+	text-decoration: underline;
+}
+
+
+.nav li:last-child {
 	position: relative;
 }
 
-.nav li:nth-child(6):before {
+.nav li:last-child:after {
 	content: '';
 	position: absolute;
 	top: 2px;
-	left: -1px;
+	left: 62px;
 	height: 32px;
 	width: 1px;
 	background: #56a2dc;
+}
+
+.flag:nth-child(2) {
+	position: relative;
+	margin-left: 59px;
+}
+
+.flag:nth-child(2):after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -38px;
+	width: 21px;
+	height: 35px;
+	background: url(../img/flag.png) no-repeat;
 }
 
 
@@ -154,7 +172,6 @@ h1 {
 	background: -o-linear-gradient(top, rgba(59,87,152,1) 0%, rgba(58,82,149,1) 25%, rgba(53,77,139,1) 50%, rgba(49,68,126,1) 74%, rgba(48,65,114,1) 100%);
 	background: -ms-linear-gradient(top, rgba(59,87,152,1) 0%, rgba(58,82,149,1) 25%, rgba(53,77,139,1) 50%, rgba(49,68,126,1) 74%, rgba(48,65,114,1) 100%);
 	background: linear-gradient(to bottom, rgba(59,87,152,1) 0%, rgba(58,82,149,1) 25%, rgba(53,77,139,1) 50%, rgba(49,68,126,1) 74%, rgba(48,65,114,1) 100%);
-	
 	border-radius: 3px;
 
 	-webkit-box-shadow: inset 1px 1px 1px 0px rgba(117,138,183,1);
@@ -162,26 +179,36 @@ h1 {
 	box-shadow: inset 1px 1px 1px 0px rgba(117,138,183,1);
 }
 
-
-.facebook img,
-.text {
+.facebook a {
 	float: left;
+	position: relative;
+	padding-left: 64px;
+	padding-right: 44px;
+	color: #fbffff;
+	font-weight: bold;
+	text-decoration: none;
 }
 
-.text {
-	padding-left: 30px;
+.facebook a span {
+	font-weight: normal;
 }
 
-.facebook span:after {
+.facebook a:hover {
+	color: #4eabda;
+}
+
+.facebook a:before {
 	content: '';
-	width: 1px;
+	width: 37px;
 	height: 35px;
 	position: absolute;
-	left: 37px;
-	background: #1f3d71;
+	left: 0;
+	top: 0;
+	background: url(../img/facebook.png) no-repeat;
+	border-right: 1px solid #1f3d71;
 }
 
-.facebook>a:after {
+.facebook a:after {
 	content: '';
 	background: url(../img/arrow.png) no-repeat;
 	width: 13px;
@@ -190,21 +217,6 @@ h1 {
 	top: 12px;
 	right: 15px;
 	font-size: 8px;
-}
-
-.facebook a {
-	display: block;
-	color: #fbffff;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.facebook a span span {
-	font-weight: normal;
-}
-
-.facebook a:hover {
-	color: #4eabda;
 }
 
 p.ou {
