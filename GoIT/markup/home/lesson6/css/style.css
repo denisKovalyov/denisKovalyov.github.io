@@ -238,7 +238,7 @@ input[type="password"]:-moz-placeholder {
 	position: relative;
 	width: 908px;
 	height: 237px;
-	margin-top: 11px;
+	margin-top: 10px;
 }
 
 .banner a {
@@ -272,28 +272,40 @@ input[type="password"]:-moz-placeholder {
 
 nav {
 	float: left;
-	margin-left: 124px;
-	padding-bottom: 1px;
+	margin-left: 125px;
 }
 
 nav li {
 	float: left;
-	line-height: 35px;
+	line-height: 25px;
+	padding: 5px 0;
 }
 
 nav li:first-child a {
-	padding: 0 19px 0 22px;
+	padding: 0px 8px 0 20px;
 }
 
 nav li:nth-child(2) a {
+	padding: 0 17px 0 17px;
+}
 
+nav li:nth-child(3) a {
+	padding: 0 14px 0 14px;
+	letter-spacing: -0.2px;
+}
+
+nav li:nth-child(4) a {
+	padding: 0 17px 0 17px;
+	letter-spacing: -0.2px;
 }
 
 nav li:last-child a {
-
+	padding: 0 9px 0 9px;
+	letter-spacing: -0.3px;
 }
 
-nav li a {
+nav li a,
+nav li a:visited {
 	float: left;
 	color: #b1bcc0;
 	font-size: 14px;
@@ -325,6 +337,10 @@ nav li a:hover {
 	font-family: 'Arial', sans-serif;
 }
 
+.basket span {
+	margin-right: 10px;
+}
+
 .basket img {
 	float: left;
 }
@@ -332,6 +348,8 @@ nav li a:hover {
 .basket output {
 	color: #0d5a8f;	
 }
+
+
 
 
 
