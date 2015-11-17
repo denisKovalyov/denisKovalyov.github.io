@@ -37,20 +37,22 @@ header div {
 
 .contacts span {
 	float: left;
+	margin: 23px 0 0 32px;
+	position: relative;
 	color: #5e696d;
 	font-family: Arial, sans-serif;
 	font-size: 18px;
+	letter-spacing: 0.4px;
 }
 
-.phone_img {
+.contacts span:before {
+	content: '';
+	position: absolute;
+	left: -27px;
+	top: -3px;
 	width: 23px;
 	height: 23px;
-	margin: 20px 0 0 5px;
-}
-
-.contacts span:last-child {
-	margin: 23px 0 0 3.5px;
-	letter-spacing: 0.4px;
+	background: url(../img/phone.png) no-repeat;
 }
 
 /*entrance form*/
@@ -79,17 +81,10 @@ header div {
 	box-shadow: 3px 3px 3px 0px rgba(150,150,150,1);
 }
 
-.login span:first-child {
-	float: left;
-	width: 13px;
-	height: 19px;
-	margin-top: 3px;
-}
-
 .login input {
 	float: left;
 	margin-top: 3px;
-	margin-left: 3px;
+	margin-left: 16px;
 	width: 105px;
 	line-height: 16px;
 	padding: 0 4px;
@@ -99,8 +94,22 @@ header div {
 	letter-spacing: 
 }
 
+.login form {
+	position: relative;
+}
+
+.login form:before {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: -1px;
+	width: 13px;
+	height: 19px;
+	background: url(../img/login.png) no-repeat;
+}
+
 .login input[type="password"] {
-	margin-left: 7px;
+	margin-left: 6px;
 
 }
 
@@ -195,7 +204,7 @@ input[type="password"]:-moz-placeholder {
 
 .nav {
 	float: left;
-	margin-left: 18px;
+	margin-left: 17px;
 	margin-top: 18px;
 	width: 75px;
 	height: 19px;
@@ -332,26 +341,39 @@ nav li a:hover {
 	margin-top: 8px;
 	margin-right: 15px;
 	line-height: 17px;
+}
+
+.basket a {
+	float: left;
+	position: relative;
 	color: #8a9296;
 	font-size: 11px;
 	font-family: 'Arial', sans-serif;
-}
-
-.basket span {
-	margin-right: 10px;
-}
-
-.basket img {
-	float: left;
+	text-decoration: none;
+	letter-spacing: 0.3px;
 }
 
 .basket output {
+	margin-right: 10px;
 	color: #0d5a8f;	
+	font-size: 12px;
 }
 
+.basket output:last-child {
+	margin-left: 10px;
+	margin-right: 0px;
+}
 
-
-
+.basket a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -28px;
+	top: 0;
+	width: 21px;
+	height: 17px;
+	background: url(../img/basket.png) no-repeat;
+}
 
 
 
