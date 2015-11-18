@@ -66,7 +66,7 @@
 			
 				<a href="#">
 				<span>товаров: </span><output>0</output>
-				<span>на сумму:<span><output>0,00 грн.</output>
+				<span>на сумму:</span><output>0,00 грн.</output>
 				</a>
 
 			</div>
@@ -74,6 +74,239 @@
 		</div>
 
 	</header>
+
+		<div class="filters clearfix">
+			
+			<div class="avto_search clearfix">
+				
+				<h1>Поиск по автомобилю</h1>
+				
+				<form action="/" method="">
+					<div class="disk clearfix">
+					
+					<ul>
+					<li>
+					<label for="brand_name">Марка <span>авто:</span></label>
+					<div class="select">
+					<select name="brand_name" id="brand_name">
+						<option value="0"></option>
+						<option value="alfa">Alfa Romeo</option>
+						<option value="audi">Audi</option>
+						<option value="bmw">BMW</option>
+						<option value="jaguar">Jaguar</option>
+					</select>
+					</div>
+					</li>
+
+					<li>
+					<label for="model">Модель <span>автомобиля: </span></label>
+					<div class="select">
+					<select name="model" id="model">
+						<option value="0"></option>
+					</select>
+					</div>
+					</li>
+
+					<li>
+					<label for="year">Год выпуска <span>автомобиля: </span> </label>
+					<div class="select">										
+					<select name="year" id="year">
+						<option value="0"></option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+					</select>
+					</div>
+					</li>
+
+					<li>
+					<label for="set">Комплектация:</label>
+					<div class="select">
+					<select name="set" id="set">
+						<option value="0"></option>
+					</select>
+					</div>
+					</li>
+					</ul>
+
+					</div>
+					
+					<div class="tires clearfix">
+				
+					<ul>
+					<li>
+					<label for="brand_name_tires">Марка <span>авто:</span></label>
+					<div class="select">
+					<select name="brand_name_tires" id="brand_name_tires">
+						<option value="0"></option>
+						<option value="alfa">Alfa Romeo</option>
+						<option value="audi">Audi</option>
+						<option value="bmw">BMW</option>
+						<option value="jaguar">Jaguar</option>
+					</select>
+					</div>
+					</li>
+
+					<li>
+					<label for="model_tires">Модель <span>автомобиля: </span></label>
+					<div class="select">
+					<select name="model_tires" id="model_tires">
+						<option value="0"></option>
+					</select>
+					</div>
+					</li>
+
+					<li>
+					<label for="year_tires">Год выпуска <span>автомобиля: </span> </label>
+					<div class="select">										
+					<select name="year_tires" id="year_tires">
+						<option value="0"></option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+					</select>
+					</div>
+					</li>
+
+					<li>
+					<label for="set_tires">Комплектация:</label>
+					<div class="select">
+					<select name="set_tires" id="set_tires">
+						<option value="0"></option>
+					</select>
+					</div>
+					</li>
+					</ul>
+
+					</div>
+				
+				<input type="submit" value="поиск...">
+
+				</form>
+
+			</div>
+
+
+
+		<div class="tires_search clearfix">
+			<h1>поиск шин</h1>
+			<form action="/" method="">
+				<ul>
+				<li>
+				<label for="size">Размер:</label>
+				<div class="select">
+					<select name="size" id="size">
+						<option value="145">145</option>
+						<option value="148">148</option>
+					</select>
+				</div>
+					<div class="select">
+						<select name="size_2" id="size_2">
+							<option value="0"></option>
+						</select>
+					</div>
+				</li>
+				<li>
+				<label for="r">R</label>
+				<div class="select">
+					<select name="r" id="r">
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="16">16</option>
+					</select>
+				</div>
+				</li>
+				<li>
+				<span>Сезон: </span>
+					<ul>
+					<li class="checkbox">
+					<input type="checkbox" id="summer" name="summer"><label for="summer" class="chekbox_label">лето</label>
+					</li>
+					<li class="checkbox">
+					<input type="checkbox" id="winter" name="winter"><label for="winter" class="chekbox_label">зима</label>
+					</li>
+					<li class="checkbox">
+					<input type="checkbox" id="all_season" name="all_season"><label for="all_season" class="chekbox_label">всесез</label>
+					</li>
+					</ul>
+				</li>
+				</ul>
+			
+				<input type="submit" value="поиск...">	
+
+			</form>
+		</div>	
+
+		
+
+		<div class="disk_search clearfix">
+			
+			<h1>поиск дисков</h1>
+			<form action="/" method="">
+			<div class="disk_main">
+				<ul>
+					<li>
+					<label for="diametr">Диаметр <span>диска:</span></label>
+					<div class="select">
+					<select name="diametr" id="diametr">
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+					</select>
+					</div>
+					</li>
+					<li>
+					<label for="holes">Количество <span>крепежных отверстий:</span></label>
+					<div class="select">
+					<select name="holes" id="holes">
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					</div>
+					</li>
+					<li>
+					<label for="diam_holes">Диаметр <span>расположения крепежных отверстий:</span></label>
+					<div class="select">
+					<select name="diam_holes" id="diam_holes">
+						<option value="12">12</option>
+						<option value="13">13</option>
+					</select>
+					</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="disk_aside">
+				<label for="dco">ДЦО<span>(диаметр центрального отверстия):</span></label>
+				<div class="select">
+				<select name="dco" id="dco">
+					<option value="12">12</option>
+					<option value="13">13</option>
+				</select>
+				</div>
+				
+				<label for="wide_disk">ЕТ<span class="narrow">(вылет диска):</span></label>
+				<div class="select">
+				<select name="wide_disk" id="wide_disk">
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+				</select>
+				</div>
+
+			</div>
+			
+			<input type="submit" value="поиск...">	
+			
+			</form>
+		</div>
+
+	</div>
+
 
 
 </body>
