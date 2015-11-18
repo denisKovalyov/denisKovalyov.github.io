@@ -10,7 +10,8 @@
 }
 
 body {
-	width: 1000px;
+	width: 908px;
+	padding: 0 46px;
 	margin: 0 auto;
 	font-family: 'Lucida Sans', 'Arial', sans-serif;
 }
@@ -23,11 +24,6 @@ body {
 
 
 /* HEADER */
-
-header {
-	padding: 0 46px;
-	width: 100%;
-}
 
 header div {
 	float: left;
@@ -384,7 +380,6 @@ nav li a:hover {
 	width: 100%;
 	margin-top: 9px;
 	margin-left: 3px;
-	padding: 0 46px;
 	color: black;
 	font-family: 'Arial', sans-serif;
 	font-size: 10px;
@@ -812,6 +807,160 @@ input[type="checkbox"]:checked + label:before {
 }
 
 /*sidebars*/
+
+.left {
+	float: left;
+	margin-top: 20px;
+	width: 192px;
+}
+
+.left>h1 {
+	position: relative;
+	width: 153px;
+	line-height: 27px;
+	margin: -2px 0 0 -2px;
+	padding-left: 28px;
+	margin-bottom: 12px;
+	border: 1px solid #79878d;
+	-webkit-box-shadow: 3px 3px 3px 0px rgba(150,150,150,1);
+	-moz-box-shadow: 3px 3px 3px 0px rgba(150,150,150,1);
+	box-shadow: 3px 3px 3px 0px rgba(150,150,150,1);
+	border-radius: 20px;
+	color: #114165;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: -0.2px;
+}
+
+.left>h1:before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 22px;
+	height: 21px;
+	background: url(../img/catalog.png) no-repeat;
+}
+
+section h1 {
+	position: relative;
+	width: 149px;
+	line-height: 26px;
+	border: 1px solid #79878d;
+	border-radius: 13px;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: -0.3px;
+}
+
+section h1:before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	width: 22px;
+	height: 22px;
+	background: url(../img/header.png) no-repeat;
+}
+
+section h1 a {
+	display: block;
+	padding-left: 29px;
+	border-radius: 20px;
+	color: #114165;
+	text-decoration: none;
+}
+
+section h1 a:hover {
+	color: white;
+	background: -moz-linear-gradient(top, rgba(32,105,136,1) 0%, rgba(17,65,101,1) 59%, rgba(12,50,86,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,105,136,1)), color-stop(59%, rgba(17,65,101,1)), color-stop(100%, rgba(12,50,86,1)));
+	background: -webkit-linear-gradient(top, rgba(32,105,136,1) 0%, rgba(17,65,101,1) 59%, rgba(12,50,86,1) 100%);
+	background: -o-linear-gradient(top, rgba(32,105,136,1) 0%, rgba(17,65,101,1) 59%, rgba(12,50,86,1) 100%);
+	background: -ms-linear-gradient(top, rgba(32,105,136,1) 0%, rgba(17,65,101,1) 59%, rgba(12,50,86,1) 100%);
+	background: linear-gradient(to bottom, rgba(32,105,136,1) 0%, rgba(17,65,101,1) 59%, rgba(12,50,86,1) 100%);: ;
+}
+
+section ul {
+	margin-top: 3px;
+}
+
+section li {
+	margin-left: 45px;
+	margin-bottom: 10px;
+}
+
+.tires_list li:last-child {
+	margin-bottom: 3px;
+}
+
+.disk_list li:last-child {
+	margin-bottom: 5px;
+}
+
+.disk_list h1 {
+	letter-spacing: normal;
+}
+
+.disk_list li,
+.bolt_list li {
+	margin-bottom: 9px;
+}
+
+section li a {
+	position: relative;
+	color: #465961;
+	font-size: 13px;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+}
+
+section li a:hover {
+	color: #0c3256;
+	font-family: 'Arial', sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+	letter-spacing: normal;
+}
+
+section li a:before {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: -10px;
+	width: 8px;
+	height: 8px;
+	background: url(../img/marker.png) no-repeat;
+}
+
+section li a:hover:before {
+	height: 9px;
+	background: url(../img/marker_acitve.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* FOOTER */
