@@ -1,0 +1,101 @@
+/*FONTS*/
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
+         url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../fonts/opensans-light-webfont.eot');
+    src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*GENERAL*/
+
+body {
+	font-family: 'League Gothic', 'Open Sans Light', 'Arial', sans-serif;
+	font-size: 16px;
+}
+
+header {
+    background: url(../img/bg_header.jpg);
+    background-size: cover;
+}
+
+.aboutUs {
+    background: rgba(116,80,131,1);
+    background: -moz-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(116,80,131,1)), color-stop(100%, rgba(50,37,57,1)));
+    background: -webkit-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+    background: -o-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+    background: -ms-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+    background: linear-gradient(to bottom, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+}
+
+main {
+    background: #f9f9f9;
+}
+
+footer {
+    background: url(../img/bg_footer.jpg);
+    background-size: cover;
+}
+
+.headerContent,
+.aboutUsContent,
+.mainContent,
+.footerContent {
+    margin: 0 auto;
+}
+
+
+/*HEADER*/
+
+.logo {
+    display: block;
+    width: 151px;
+    height: 37px;
+    background: url(../img/logo.png) no-repeat;
+}
+
+.logo__h1 {
+    text-indent: -9999px;
+}
+
+.mainMenu__item {
+    line-height: 18px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.mainMenu__link {
+    color: white;
+    text-decoration: none;
+}
+
+.mainMenu__item--active {
+    position: relative;
+}
+
+.mainMenu__item--active:after {
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: -6px;
+    display: block;
+    width: 47px;
+    height: 2px;
+    background: #edbfff;    
+}
