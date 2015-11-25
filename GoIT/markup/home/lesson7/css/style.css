@@ -75,7 +75,6 @@ footer {
 }
 
 .mainMenu__item {
-    line-height: 18px;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -85,15 +84,15 @@ footer {
     text-decoration: none;
 }
 
-.mainMenu__item--active {
+.mainMenu__link--underline {
     position: relative;
 }
 
-.mainMenu__item--active:after {
+.mainMenu__link--underline:after {
     content: '';
     position: absolute;
-    top: 26px;
-    left: -6px;
+    top: 31px;
+    left: -5px;
     display: block;
     width: 47px;
     height: 2px;

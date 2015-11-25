@@ -32,7 +32,7 @@ header div {
 
 /*contacts*/
 
-.contacts span {
+.contacts {
 	float: left;
 	margin: 23px 0 0 32px;
 	position: relative;
@@ -42,7 +42,7 @@ header div {
 	letter-spacing: 0.4px;
 }
 
-.contacts span:before {
+.contacts:before {
 	content: '';
 	position: absolute;
 	left: -27px;
@@ -185,10 +185,11 @@ input[type="password"]:-moz-placeholder {
 	margin-left: 20px;
 	color: #bfbfbf;
 	font-size: 12px;
+	text-decoration: underline;
 	letter-spacing: 0.1px;
 }
 
-.login a:last-child:after {
+/*.login a:last-child:after {			для пиксельной точности
 	content: '';
 	position: absolute;
 	top: 15px;
@@ -197,6 +198,7 @@ input[type="password"]:-moz-placeholder {
 	height: 1px;
 	background: #bfbfbf;
 }
+*/
 
 /* supplementary navigation */
 
@@ -284,7 +286,7 @@ nav {
 nav li {
 	float: left;
 	line-height: 25px;
-	padding: 4px 0;
+	margin: 4px 0;
 }
 
 nav li:first-child a {
@@ -1170,7 +1172,7 @@ section li a:hover:before {
 
 /*main*/
 
-main {
+.product_line {
 	float: left;
 	margin-top: 14px;
 	margin-bottom: 40px;
@@ -1196,7 +1198,11 @@ main {
 	text-align: center;
 }
 
-.product p a{
+.product a {
+	text-decoration: none;
+}
+
+.product p {
 	color: #206988;
 	font-size: 15px;
 	font-weight: bold;
@@ -1204,7 +1210,7 @@ main {
 	text-decoration: none;
 }	
 
-.product figcaption a{
+.product figcaption {
 	color: #1f2528;
 	font-size: 13px;
 	margin-bottom: 1px;
@@ -1310,7 +1316,7 @@ footer {
 
 /*main*/
 
-main {
+.product_line {
 	float: left;
 	margin-top: 14px;
 	margin-bottom: 40px;
@@ -1415,6 +1421,8 @@ footer ul {
 
 footer ul li {
 	display: inline-block;
+	padding: 0 12px;
+	border-right: 1px solid #bec6c9;
 	font-family: 'Arial', sans-serif;
 	font-size: 12px;
 	line-height:normal;
@@ -1422,7 +1430,6 @@ footer ul li {
 }
 
 footer ul li a {
-	padding: 0 12px;
 	color: #bec6c9;
 	text-decoration: none;
 }
@@ -1431,44 +1438,6 @@ footer ul li a:hover {
 	color: #52abcb;
 }
 
-footer ul li {
-	border-right: 1px solid #bec6c9;
-}
-
-footer ul li:last-child {
-	border: none;
-}
-
-footer ul {
-	display: inline-block;
-	margin-top: 10px;
-	margin-bottom: 15px;
-	font-size: 0; 
-	line-height: 0;
-	letter-spacing: -1px; 
-}
-
-footer ul li {
-	display: inline-block;
-	font-family: 'Arial', sans-serif;
-	font-size: 12px;
-	line-height:normal;
-	letter-spacing:normal;
-}
-
-footer ul li a {
-	padding: 0 12px;
-	color: #bec6c9;
-	text-decoration: none;
-}
-
-footer ul li a:hover {
-	color: #52abcb;
-}
-
-footer ul li {
-	border-right: 1px solid #bec6c9;
-}
 
 footer ul li:last-child {
 	border: none;

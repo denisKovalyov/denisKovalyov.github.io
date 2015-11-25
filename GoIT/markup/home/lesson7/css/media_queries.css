@@ -5,35 +5,49 @@
 /*HEADER*/
 
 .headerContent {
-	width: 100%;
+	width: 320px;
 	height: 447px;
 	padding-top: 70px;
 }
 
 .logo {
-	margin: 0 auto 40px;
+	margin: 0 auto 27px;
+}
+
+.mainMenu {
+	margin: 0 auto;
 }
 
 .mainMenu__item {
 	width: 246px;
+	line-height: 42px;
 	margin: 0 auto;
 	text-align: center;
 }
 
 .mainMenu__item--active {
+	position: relative;
+	width: 35px;
+	line-height: 45px;
  	text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
 }
 
-.mainMenu__item--active:after {
-    content: '';
-    position: absolute;
-    top: 26px;
-    left: 160px;
-    display: block;
-    width: 47px;
-    height: 2px;
-    background: #edbfff;  
+.mainMenu__nestedMenu {
+	position: absolute;
+	top: -9999px;
+	opacity: 0;
 }
+
+.mainMenu__item--active:hover .mainMenu__nestedMenu {
+	top: 45px;
+	opacity: 1;
+}
+
+.mainMenu__item--active:hover {
+	width: 246px;
+}
+
+
 
 
 }
