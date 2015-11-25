@@ -1,17 +1,17 @@
-/*320px wide screens*/
+/*320px-479px wide screens*/
 
-@media (max-width: 320px) {
+@media (max-width: 479px) {
 
 /*HEADER*/
 
 .headerContent {
-	width: 320px;
-	height: 447px;
+	width: 100%;
+	height: 500px;   	/*	УБРАТЬ!!!!*/
 	padding-top: 70px;
 }
 
 .logo {
-	margin: 0 auto 27px;
+	margin: 0 auto 25px;
 }
 
 .mainMenu {
@@ -19,8 +19,8 @@
 }
 
 .mainMenu__item {
-	width: 246px;
-	line-height: 42px;
+	width: 244px;
+	line-height: 40px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -28,7 +28,7 @@
 .mainMenu__item--active {
 	position: relative;
 	width: 35px;
-	line-height: 45px;
+	line-height: 46px;
  	text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
 }
 
@@ -40,14 +40,78 @@
 
 .mainMenu__item--active:hover .mainMenu__nestedMenu {
 	top: 45px;
+	left: -1px;
 	opacity: 1;
+	background: rgba(54,41,62,0.9);
+	text-shadow: none;
+	border-bottom: 1px solid #051116;
+	border-left: 1px solid #051116;
+	border-right: 1px solid #051116;
+	border-radius: 0 0 8px 8px;
+}
+
+.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item {
+	border-top: 1px solid #503d58;
+	border-bottom: 1px solid #36283e;
 }
 
 .mainMenu__item--active:hover {
-	width: 246px;
+	width: 244px;
+	border-top: 1px solid #051116;
+	border-left: 1px solid #051116;
+	border-right: 1px solid #051116;
+	border-bottom: 1px solid #36283e;
+	border-radius: 8px 8px 0 0;
+	-webkit-box-shadow: inset 0px 1px 1px 0px rgba(109,80,122,1);
+	-moz-box-shadow: inset 0px 1px 1px 0px rgba(109,80,122,1);
+	box-shadow: inset 0px 1px 1px 0px rgba(109,80,122,1);
+	background: rgba(54,41,62,0.9);
 }
 
+.mainMenu__nestedMenu .mainMenu__item:last-child {
+	border-radius: 0 0 8px 8px;
+}
 
+.mainMenu__item--active:hover a {
+	display: block;
+}
+
+.mainMenu__item--active:hover .mainMenu__link--underline:after {
+    content: '';
+    position: absolute;
+    top: 39px;
+    left: 99px;
+    display: block;
+    width: 47px;
+    height: 2px;
+    background: #edbfff;    
+}
+
+.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item:hover {
+	position: relative;
+	background: rgba(43,34,49,0.6);
+}
+
+.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item:hover:after {
+	content: '';
+	position: absolute;
+	width: 244px;
+	height: 2px;
+	left: 0;
+	top: 38px;
+	background: #edbfff;
+}
+
+.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item:last-child:hover:after {
+	content: '';
+	position: absolute;
+	width: 240px;
+	height: 2px;
+	left: 2px;
+	top: 38px;
+	border-radius: 0 0 8px 8px;
+	background: #edbfff;
+}
 
 
 }
