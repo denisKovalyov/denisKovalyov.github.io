@@ -26,7 +26,6 @@
 
 body {
 	font-family: 'League Gothic', 'Open Sans Light', 'Arial', sans-serif;
-	font-size: 16px;
 }
 
 header {
@@ -34,7 +33,7 @@ header {
     background-size: cover;
 }
 
-.aboutUs {
+.news {
     background: rgba(116,80,131,1);
     background: -moz-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(116,80,131,1)), color-stop(100%, rgba(50,37,57,1)));
@@ -54,9 +53,10 @@ footer {
 }
 
 .headerContent,
-.aboutUsContent,
+.newsContent,
 .mainContent,
 .footerContent {
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -97,4 +97,30 @@ footer {
     width: 47px;
     height: 2px;
     background: #edbfff;    
+}
+
+/*slider*/
+
+.slider {
+    width: 100%;
+}
+
+.slider__arrowBackwards {
+    float: left;
+    height: 100%;
+    background: url(../img/arrowBackwards.png) no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.slider__arrowForward {
+    float: right;
+    height: 100%;
+    background: url(../img/arrowForward.png) no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.slider__content {
+    float: left;
 }

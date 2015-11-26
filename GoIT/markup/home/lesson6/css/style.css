@@ -289,7 +289,11 @@ nav li {
 	margin: 4px 0;
 }
 
-nav li:first-child a {
+nav li a {
+	padding: 0 14px;
+}
+
+/*nav li:first-child a {				для пиксельной точности
 	padding: 0px 8px 0 20px;
 }
 
@@ -310,7 +314,7 @@ nav li:nth-child(4) a {
 nav li:last-child a {
 	padding: 0 9px 0 9px;
 	letter-spacing: -0.3px;
-}
+}*/
 
 nav li a,
 nav li a:visited {
