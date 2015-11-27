@@ -132,7 +132,6 @@ footer {
 .slider__footer {
     clear: both;
     width: 88px;
-    margin: 0 auto;
     line-height: 0;
     font-size: 0;
     letter-spacing: -1px;
@@ -149,9 +148,7 @@ footer {
     cursor: pointer;
 }
 
-.slider__navigation:first-child {
-    margin-left: 0;
-}
+
 
 .slider__navigation:hover {
     cursor: pointer;
@@ -205,3 +202,4 @@ footer {
 .article__link:hover {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }
+
