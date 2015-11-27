@@ -178,7 +178,7 @@ footer {
 /*NEWS*/
 
 .article {
-    overflow: hidden;
+    position: relative;
     color: white;
     text-shadow: 1px 1px 1px rgba(15, 21, 24, 1);
 }
@@ -188,7 +188,20 @@ footer {
 }
 
 .article__paragraph {
+    overflow: hidden;
     line-height: 24px;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+}
+
+.article__link {
+    position: absolute;
+    display: block;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.article__link:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }

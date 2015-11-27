@@ -6,7 +6,7 @@
 
 .headerContent {
 	width: 100%;
-	height: 516px;
+	height: 445px;
 	padding-top: 70px;
 }
 
@@ -124,7 +124,7 @@
 .slider__content {
 	width: 74%;
 	padding-left: 10%;
-	margin-bottom: 79px;
+	margin-bottom: 78px;
 }
 
 .slider__arrowBackwards {
@@ -150,16 +150,25 @@
 	text-shadow: 0 2px 2px rgba(0,0,0,0.7);
 }
 
-.slider__footer {
-    margin-bottom: 68px;
-}
-
 /*NEWS*/
 
 .article {
-	width: 195px;
-	height: 92px;
-	margin: 72px 0 65px 83px;
+	margin-top: 70px;
+	margin-left: 24.3%;	
+	margin-right: 10%;
+	margin-bottom: 65px;	
+}
+
+.article__paragraph {
+	margin-top: 3px;
+	margin-left: 1px;
+	height: 70px;
+	letter-spacing: -0.1px;
+}
+
+.article__link {
+	bottom: -35px;
+	right: -7%;
 }
 
 
