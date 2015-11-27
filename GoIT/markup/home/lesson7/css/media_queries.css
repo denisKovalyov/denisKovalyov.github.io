@@ -222,11 +222,36 @@
 
 .article:last-child {
 	margin-top: 76px;
-	margin-bottom: 99px;
+	margin-bottom: 101px;
 }
 
 
-/*Main content*/
+/*MAIN CONTENT*/
+
+.mainContent {
+	width: 87.5%;
+    padding: 69px 6.25% 75px;
+}
+
+.blog {
+	margin-left: 17px;
+}
+
+.blog__article {
+	height: 213px;
+	padding: 27px 40px 32px 36px;
+}
+
+.blog__header {
+	margin-top: -2px;
+	margin-left: -1px;
+}
+
+.blog__paragraph {
+	height: 166px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
 
 
 }
