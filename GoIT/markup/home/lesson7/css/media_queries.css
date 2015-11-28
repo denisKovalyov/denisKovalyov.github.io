@@ -136,7 +136,7 @@
 }
 
 .slider__header {
-	margin-left: -9px;
+	margin-left: -8px;
 	color: #fefefe;
 	font-size: 36px;
 	text-shadow: 0 2px 2px rgba(0,0,0,0.7);
@@ -155,12 +155,11 @@
 }
 
 
-
 /*NEWS*/
 
 .article {
 	margin-top: 70px;
-	margin-left: 24.3%;	
+	margin-left: 26%;	
 	margin-right: 10%;
 }
 
@@ -173,7 +172,7 @@
 
 .article__link {
 	bottom: -35px;
-	right: -7%;
+	right: -3.7%;
 }
 
 .article__icon--wrench:before {
@@ -234,7 +233,7 @@
 }
 
 .blog {
-	margin-left: 17px;
+	margin-left: 25px;
 }
 
 .blog__article {
@@ -250,7 +249,36 @@
 .blog__paragraph {
 	height: 166px;
 	margin-top: 4px;
-	margin-left: 4px;
+	margin-left: 2px;
+}
+
+.blog__footer {
+    margin-top: 24px;
+    margin-left: 37%;
+}
+
+.updates {
+	margin-top: 44px;
+}
+
+.updates__post {
+	margin-left: 24%;
+}
+
+.updates__postName {
+	height: 19px;
+	line-height: 18px;
+	overflow: hidden;
+}
+
+.updates__paragraph {
+	height: 18px;
+	overflow: hidden;
+}
+
+.sponsors {
+	margin-top: 50px;
+
 }
 
 
