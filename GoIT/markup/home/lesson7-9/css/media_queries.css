@@ -228,12 +228,13 @@
 /*MAIN CONTENT*/
 
 .mainContent {
-	width: 87.5%;
-    padding: 69px 6.25% 75px;
+    padding-top: 69px; 
+    padding-bottom: 75px;
 }
 
 .blog {
-	margin-left: 25px;
+	margin-left: 14%;
+	margin-right: 6%;
 }
 
 .blog__article {
@@ -259,10 +260,12 @@
 
 .updates {
 	margin-top: 44px;
+	margin-left: 6%;
 }
 
 .updates__post {
-	margin-left: 24%;
+	margin-left: 22.7%;
+	margin-right: 6%;
 }
 
 .updates__postName {
