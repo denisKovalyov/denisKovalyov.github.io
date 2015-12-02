@@ -21,7 +21,6 @@ function dataInput() {
 };
 
 function pow(base, exponent) {
-	
 	var result = 1;
 
 	if (exponent > 0) {
@@ -37,15 +36,14 @@ function pow(base, exponent) {
 	console.log(base + ' в степени '+ exponent + ' равно: ', result)
 };
 
-function exponentiation() {
+function exponentiation () {
 	dataInput ();
 	pow (x,n);
 };
 
 // Arrays and loops
 
-function arrayFilling() {
-	
+function arrayFilling () {
 	var array = [];
 	
 	for (var i = 0; i < 5; i++) {
