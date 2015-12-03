@@ -261,6 +261,7 @@
 .updates {
 	margin-top: 44px;
 	margin-left: 6%;
+	margin-bottom: 128px;
 }
 
 .updates__post {
@@ -280,9 +281,48 @@
 }
 
 .sponsors {
-	margin-top: 50px;
+	padding-top: 51px;
 
 }
 
+.sponsors__logo1 {
+    margin-left: 19.8%;
+    margin-bottom: 61px;
+}
+
+.sponsors__logo2 {
+	float: right;
+	margin-right: 19%;
+	margin-bottom: 61px;
+}
+
+.sponsors__logo3 {
+    margin-left: 22.2%;
+    margin-bottom: 43px;
+}
+
+.sponsors__logo4 {
+	float: right;
+    margin-right: 21.7%;
+    margin-bottom: 43px;
+}
+
+.sponsors__logo5 {
+    margin-left: 13.3%;
+}
+
+.sponsors__logo6 {
+	float: right;
+    margin-right: 12.5%;
+}
+
+.footerContent {
+	text-align: center;
+	padding-bottom: 148px;
+}
+
+.footer__paragraph {
+	margin-top: 41px;
+}
 
 }

@@ -49,3 +49,9 @@ table {
 
 /*My additions*/
 
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
