@@ -5,7 +5,7 @@ var x, n;
 function exponentiation() {
 	dataEntering ();
 	validation();
-	pow (x,n);
+	pow (x, n);
 }
 
 function dataEntering() {
@@ -28,8 +28,8 @@ function validation() {
 }
 
 function pow(base, exponent) {
-    var result = 1;
-
+	var result = 1;
+	
 	if (exponent > 0) {
 	for (i = 0; i < exponent; i++) {
 		result *=base;
@@ -41,9 +41,10 @@ function pow(base, exponent) {
 	result = 1/result;
 	}
 
-	console.log(base + ' в степени '+ exponent + ' равно: ', result);
-}
+	// alert(base + ' в степени '+ exponent + ' равно: ' + result); как вариант
 
+	console.log(base + ' в степени '+ exponent + ' равно: ' + result);
+}
 
 // Arrays and loops
 
