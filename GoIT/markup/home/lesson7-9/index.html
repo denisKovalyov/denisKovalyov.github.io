@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>HW_7 (responsive design)</title>
+
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media_queries.css">
+
+	<script src="js/html5shiv.js"></script>
+	<script src="js/html5shiv-printshiv.js"></script>	
 </head>
 
 <body>
@@ -19,14 +24,15 @@
 			
 			<nav>
 				<ul class="mainMenu">
-					<li class="mainMenu__item mainMenu__item--active"><a href="#" class="mainMenu__link mainMenu__link--underline">home</a>
-					<ul class="mainMenu__nestedMenu">
-						<li class="mainMenu__item"><a href="#" class="mainMenu__link">about</a></li>
-						<li class="mainMenu__item"><a href="#" class="mainMenu__link">blog</a></li>
-						<li class="mainMenu__item"><a href="#" class="mainMenu__link">products</a></li>
-						<li class="mainMenu__item"><a href="#" class="mainMenu__link">lorem ipsum</a></li>
-						<li class="mainMenu__item"><a href="#" class="mainMenu__link">dolor sit amet</a></li>
-					</ul>
+					<li class="mainMenu__item"><a href="#" class="mainMenu__link">home</a>
+						<ul class="nestedMenu">
+							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link nestedMenu__link--active">home</a></li>
+							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">about</a></li>
+							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">blog</a></li>
+							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">products</a></li>
+							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">lorem ipsum</a></li>
+							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">dolor sit amet</a></li>
+						</ul>
 					</li>
 				</ul>
 			</nav>
