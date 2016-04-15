@@ -13,150 +13,133 @@
 </head>
 
 <body>
-	
+
 	<header>
-		<div class="headerContent">
+		<div class="logo">
+			<img src="img/logo.png" width="152" height="39" alt="Pingbuller_logo" title="Pingbuller">
+			<h1 class="logo__h1">Pingbuller</h1>
+		</div>
 
-			<div class="logo">
-				<h1 class="logo__h1">Pingbuller</h1>
+		<nav>
+			<ul class="mainMenu">
+				<li class="mainMenu__item"><a href="#" class="mainMenu__link">home</a>
+					<ul class="nestedMenu">
+						<li class="nestedMenu__item"><a href="#" class="nestedMenu__link nestedMenu__link--active">home</a></li>
+						<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">about</a></li>
+						<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">blog</a></li>
+						<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">products</a></li>
+						<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">lorem ipsum</a></li>
+						<li class="nestedMenu__item"><a href="#" class="nestedMenu__link nestedMenu__link--last">dolor sit amet</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+		<div class="slider">	
+			<a class="slider__arrowBackwards">
+				<img src="img/arrowBackwards.png" width="23" height="35" alt="backwards" title="backwards">
+			</a>
+
+			<div class="sliderContent">
+				<h2 class="sliderContent__header">Lorem Ipsum Dolor</h2>
+				<p class="sliderContent__paragraph">IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</p>
 			</div>
-			
-			<nav>
-				<ul class="mainMenu">
-					<li class="mainMenu__item"><a href="#" class="mainMenu__link">home</a>
-						<ul class="nestedMenu">
-							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link nestedMenu__link--active">home</a></li>
-							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">about</a></li>
-							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">blog</a></li>
-							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">products</a></li>
-							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link">lorem ipsum</a></li>
-							<li class="nestedMenu__item"><a href="#" class="nestedMenu__link nestedMenu__link--last">dolor sit amet</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			
-			<div class="slider">	
-				<a class="slider__arrowBackwards">
-					<img src="img/arrowBackwards.png" width="23" height="35" alt="backwards" title="backwards">
-				</a>
+				
+			<a class="slider__arrowForward">
+				<img src="img/arrowForward.png" width="23" height="35" alt="forward" title="forward">
+			</a>
 
-				<div class="sliderContent">
-						<h2 class="sliderContent__header">Lorem Ipsum Dolor</h2>
-						<p class="sliderContent__paragraph">IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</p>
-					</div>
-					
-					<a class="slider__arrowForward">
-						<img src="img/arrowForward.png" width="23" height="35" alt="forward" title="forward">
-					</a>
-
-					<div class="sliderFooter">
-						<a class="sliderFooter__item"></a>
-						<a class="sliderFooter__item sliderFooter__item--active"></a>
-						<a class="sliderFooter__item"></a>
-						<a class="sliderFooter__item"></a>
-					</div>
-				</div>
-
-		</div><!-- headerContent -->	
+			<div class="sliderNavigation sliderNavigation--mainSlider">
+				<a class="sliderNavigation__item"></a>
+				<a class="sliderNavigation__item sliderNavigation__item--active"></a>
+				<a class="sliderNavigation__item"></a>
+				<a class="sliderNavigation__item"></a>
+			</div>
+		</div>
 	</header>
 	
 	<div class="news">
-		<div class="newsContent">
-			
-			<article class="newsArticle">
-				<h3 class="newsArticle__header">ABOUT OUR COMPANY</h3>
-				<p class="newsArticle__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.
-				</p>
-				<a href="#" class="newsArticle__link">READ MORE</a>
-			</article>	
+		<article class="newsArticle newsArticle--icon_wrench">
+			<h2 class="newsArticle__header">ABOUT OUR COMPANY</h2>
+			<p class="newsArticle__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.
+			</p>
+			<a href="#" class="newsArticle__link">READ MORE</a>
+		</article>	
 
-			<article class="newsArticle">
-				<h3 class="newsArticle__header">ABOUT OUR COMPANY</h3>
-				<p class="newsArticle__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.
-				</p>
-				<a href="#" class="newsArticle__link">READ MORE</a>
-			</article>			
-
-			<article class="newsArticle">
-				<h3 class="newsArticle__header">ABOUT OUR COMPANY</h3>
-				<p class="newsArticle__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.
-				</p>
-				<a href="#" class="newsArticle__link">READ MORE</a>
-			</article>
-			
-		</div>
+		<article class="newsArticle newsArticle--icon_cloud">
+			<h2 class="newsArticle__header">ABOUT OUR COMPANY</h2>
+			<p class="newsArticle__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.
+			</p>
+			<a href="#" class="newsArticle__link">READ MORE</a>
+		</article>			
+	
+		<article class="newsArticle newsArticle--icon_music">
+			<h2 class="newsArticle__header">ABOUT OUR COMPANY</h2>
+			<p class="newsArticle__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.
+			</p>
+			<a href="#" class="newsArticle__link">READ MORE</a>
+		</article>
 	</div>
 
-	<main>
-		<div class="mainContent">
+	<main>	
+		<div class="blog">
+			<article class="blogArticle">
+				<h2 class="blogArticle__header">
+					PingbulLer <span class="blogArticle__subheader">starts here</span>
+				</h2>
+
+				<p class="blogArticle__paragraph">
+					“Nunc turpis neque, feu&shy;giat eget eleifend et, lacinia non neque. Prae&shy;sent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi conval&shy;lis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
+					Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+				</p>
 			
-			<div class="blog">
-				<div class="blog__article">
-					<h3 class="blog__header">
-						PingbulLer<span class="blog__subheader">starts here</span>
-					</h3>
-
-					<p class="blog__paragraph">
-						“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
-						Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-					</p>
-
+				<div class="sliderNavigation sliderNavigation--blog">
+					<a class="sliderNavigation__item"></a>
+					<a class="sliderNavigation__item sliderNavigation__item--active"></a>
+					<a class="sliderNavigation__item"></a>
+					<a class="sliderNavigation__item"></a>
 				</div>
-				
-					<div class="blog__footer">
-						<div class="blog__navigation"></div>
-						<div class="blog__navigation blog__navigation--active"></div>
-						<div class="blog__navigation"></div>
-						<div class="blog__navigation"></div>
-					</div>
-			</div>
+			</article>
+		</div>
 
-
-			<div class="updates">
-				
-				<h3 class="updates__header">recent updates</h3>
-				
-				<div class="updates__post updates__post--picture_1">
-					<h4 class="updates__postName">Nunc turpis neque feugiant eget</h4>
-					<p class="updates__paragraph">Posted by Admin on March 13 2012 in Recent News</p>
-				</div>
-
-				<div class="updates__post updates__post--picture_2">
-					<h4 class="updates__postName">Nunc turpis neque feugiant eget</h4>
-					<p class="updates__paragraph">Posted by Admin on March 13 2012 in Category</p>
-				</div>
-
-				<div class="updates__post updates__post--picture_3">
-					<h4 class="updates__postName">Nunc turpis neque feugiant eget</h4>
-					<p class="updates__paragraph">Posted by Admin on March 13 2012 in Blog Updates</p>
-				</div>
-				
-				<a href="#" class="updates__link">more blog posts</a>
-
-			</div>
+		<section class="updates">
+			<h2 class="updates__header">recent updates</h2>
 			
-			<div class="sponsors clearfix">
-				<div class="sponsors__item sponsors__logo1"><img src="img/logo_1.png" width="69" height="64" alt="" title=""></div>
-				<div class="sponsors__item sponsors__logo2"><img src="img/logo_2.png" width="72" height="64" alt="" title=""></div>
-				<div class="sponsors__item sponsors__logo3"><img src="img/logo_3.png" width="65" height="65" alt="" title=""></div>
-				<div class="sponsors__item sponsors__logo4"><img src="img/logo_4.png" width="50" height="65" alt="" title=""></div>
-				<div class="sponsors__item sponsors__logo5"><img src="img/logo_5.png" width="103" height="61" alt="" title=""></div>
-				<div class="sponsors__item sponsors__logo6"><img src="img/logo_6.png" width="78" height="61" alt="" title=""></div>
-			</div>
+			<article class="updatesPost updatesPost--picture_1">
+				<h3 class="updatesPost__header">Nunc turpis neque feugiant eget</h3>
+				<p class="updatesPost__paragraph">Posted by Admin on March 13 2012 in Recent News</p>
+			</article>
 
+			<article class="updatesPost updatesPost--picture_2">
+				<h3 class="updatesPost__header">Nunc turpis neque feugiant eget</h3>
+				<p class="updatesPost__paragraph">Posted by Admin on March 13 2012 in Category</p>
+			</article>
+
+			<article class="updatesPost updatesPost--picture_3">
+				<h3 class="updatesPost__header">Nunc turpis neque feugiant eget</h3>
+				<p class="updatesPost__paragraph">Posted by Admin on March 13 2012 in Blog Updates</p>
+			</article>
+			
+			<a href="#" class="updates__link">more blog posts</a>
+		</section>
+		
+		<div class="sponsors clearfix">
+			<div class="sponsors__item sponsors__item--logo1"><img src="img/logo_1.png" width="69" height="64" alt="" title=""></div>
+			<div class="sponsors__item sponsors__item--logo2"><img src="img/logo_2.png" width="72" height="64" alt="" title=""></div>
+			<div class="sponsors__item sponsors__item--logo3"><img src="img/logo_3.png" width="65" height="65" alt="" title=""></div>
+			<div class="sponsors__item sponsors__item--logo4"><img src="img/logo_4.png" width="50" height="65" alt="" title=""></div>
+			<div class="sponsors__item sponsors__item--logo5"><img src="img/logo_5.png" width="103" height="21" alt="" title=""></div>
+			<div class="sponsors__item sponsors__item--logo6"><img src="img/logo_6.png" width="78" height="61" alt="" title=""></div>
 		</div>
 	</main>
 
-	<footer>
-		<div class="footerContent">
+	<footer class="footer">
 			<p class="footer__paragraph">
 				Designed by 
-				<span class="footer__boldText">
+				<span class="bold">
 				Pingbull AS
 				</span>
 			</p>
-		</div>
 	</footer>
 
 
