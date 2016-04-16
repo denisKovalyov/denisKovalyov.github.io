@@ -1,111 +1,154 @@
-
 /*480px-767px wide screens*/
 
 @media screen and (min-width: 480px) {
 
 /*HEADER*/
 
-.logo {
-	margin: 0 auto 25px;
+header {
+	height: 478px;
 }
 
-.mainMenu {
-	margin: 0 auto;
+.sliderContent {
+	height: 153px;
+    background-color: rgba(0,0,0,0.2);
 }
 
-.mainMenu__item {
-	line-height: 40px;
-	margin: 0 auto;
-	text-align: center;
+.sliderContent__header {
+	float: left;
+	margin-left: 39px;
 }
 
-.mainMenu__item--active {
-	position: relative;
-	width: 35px;
-	line-height: 48px;
- 	text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
+.sliderContent__paragraph {
+	position: static;
+	float: left;
+	clear: left;
+	margin-top: 3px;
+	margin-left: 37px;
 }
 
-.mainMenu__nestedMenu {
+.sliderContent__img {
 	position: absolute;
-	top: -9999px;
-	opacity: 0;
+	top: -9px;
+	right: 31px;
+	display: block;
+	width: 192px;
+	height: 304px;
 }
 
-.mainMenu__item--active:hover .mainMenu__nestedMenu {
-	top: 45px;
-	left: -1px;
-	opacity: 1;
-	background: rgba(54,41,62,0.9);
-	text-shadow: none;
-	border-bottom: 1px solid #051116;
-	border-left: 1px solid #051116;
-	border-right: 1px solid #051116;
-	border-radius: 0 0 8px 8px;
+.sliderNavigation--mainSlider {
+	margin-top: 22px;
+}	
+
+/*NEWS*/
+
+.newsArticle {
+	margin-top: 77px;
+	margin-left: 83px;  
 }
 
-.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item {
-	width: 244px;
-	border-top: 1px solid #503d58;
-	border-bottom: 1px solid #36283e;
+.newsArticle:nth-child(2) {
+    margin-top: 60px;
 }
 
-.mainMenu__item--active:hover {
-	width: 244px;
-	line-height: 46px;
-	border-top: 1px solid #051116;
-	border-left: 1px solid #051116;
-	border-right: 1px solid #051116;
-	border-bottom: 1px solid #36283e;
-	border-radius: 8px 8px 0 0;
-	-webkit-box-shadow: inset 0px 1px 1px 0px rgba(109,80,122,1);
-	-moz-box-shadow: inset 0px 1px 1px 0px rgba(109,80,122,1);
-	box-shadow: inset 0px 1px 1px 0px rgba(109,80,122,1);
-	background: rgba(54,41,62,0.9);
+.newsArticle:last-child {
+    margin-top: 64px;
 }
 
-.mainMenu__nestedMenu .mainMenu__item:last-child {
-	border-radius: 0 0 8px 8px;
+/*MAIN CONTENT*/
+
+.blogArticle {
+	padding-right: 28px;
 }
 
-.mainMenu__item--active:hover a {
+.blogArticle__header {
+	margin-top: 2px;
+	margin-left: 4px;
+	font-size: 30px;
+}
+
+.blogArticle__subheader {
+	display: inline;
+}
+
+.blogArticle__paragraph {
+	margin-top: 14px;
+    margin-left: 4px;
+    letter-spacing: -0.1px;
+}
+
+.sliderNavigation--blog {
+    margin-left: -54px;
+}
+
+.updates__header {
+    margin-left: 83px;
+}
+
+.updatesPost {
+	margin-left: 150px;
+}
+
+.updatesPost__paragraph {
+	width: auto;
+	margin-right: 60px;
+}
+
+.updatesPost--picture_2 {
+    margin-top: 24px;
+}
+
+.updatesPost--picture_3 {
+    margin-top: 22px;
+}
+
+.updates__link {
+    right: 60px;
+}
+
+.sponsors {
+    padding-top: 36px;
+}
+
+.sponsors__item {
+    margin-bottom: 25px;
+    vertical-align: top;
+}
+
+.sponsors__item--logo1 {
+    margin-left: 83px;
+}
+
+.sponsors__item--logo3 {
+    margin-left: 54px;
+}
+
+.sponsors__item--logo4 {
+    margin-left: 68px;
+    vertical-align: middle;
+}
+
+.sponsors__item--logo5 {
+    margin-left: 58px;
+	vertical-align: middle;
+}
+
+.sponsors__item--logo6 {
+    margin-left: 56px;
+    vertical-align: middle;
+}
+
+.newCategories {
 	display: block;
 }
 
-.mainMenu__item--active:hover .mainMenu__link--underline:after {
-    content: '';
-    position: absolute;
-    top: 39px;
-    left: 99px;
+.footer {
+	padding-top: 45px;
+	padding-bottom: 86px;
+}
+
+.footerMenu {
     display: block;
-    width: 47px;
-    height: 2px;
-    background: #edbfff;    
+    margin-bottom: 33px;  
 }
 
-.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item:hover {
-	position: relative;
-	background: rgba(43,34,49,0.6);
-}
-
-.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item:hover:after {
-	content: '';
-	position: absolute;
-	width: 244px;
-	height: 2px;
-	left: 0;
-	top: 38px;
-	background: #edbfff;
-}
-
-.mainMenu__item--active:hover .mainMenu__nestedMenu .mainMenu__item:last-child:hover:after {
-	content: '';
-	position: absolute;
-	width: 240px;
-	height: 2px;
-	left: 2px;
-	top: 38px;
-	border-radius: 0 0 8px 8px;
-	background: #edbfff;
-}
 }
