@@ -43,21 +43,28 @@ body {
 header {
     position: relative;
     z-index: 1;
-    width: 100%;
-    height: 446px;
-    padding-top: 70px;
     background: url(../img/bg_header.jpg) no-repeat;
     background-size: cover;
 }
 
 main {
-    padding-top: 69px;
     background: #f9f9f9;
 }
 
 footer {
     background: url(../img/bg_footer.jpg);
     background-size: cover;
+}
+
+.headerContent,
+.sliderContent,
+.newsContent,
+.mainContent,
+.sponsorsContent,
+.newCategoriesContent,
+.footerContent {
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .clearfix:after {
@@ -80,7 +87,17 @@ footer {
     word-spacing: 2px;
 }
 
+.letter_spacing {
+    letter-spacing: -0.5px;
+}
+
 /*HEADER*/
+
+header {
+    width: 100%;
+    height: 446px;
+    padding-top: 70px;
+}
 
 .logo {
     width: 152px;
@@ -220,11 +237,14 @@ footer {
 
 .slider {
     position: relative;
-    width: 100%;
     padding-top: 93px;
     margin-top: 34px;
     font-family: 'League Gothic', 'Open Sans', 'Arial', sans-serif;
     text-align: center;
+}
+
+.sliderContent {
+    position: relative;
 }
 
 .slider__arrowBackwards,
@@ -252,7 +272,7 @@ footer {
 
 .sliderContent__subheader {
     position: absolute;
-    top: 132px;
+    bottom: -21px;
     left: 50%;
     margin-left: -98px;
     width: 205px;
@@ -323,7 +343,6 @@ footer {
 .news {
     position: relative;
     width: 100%;
-    height: 598px;
     border-top: 1px solid #33253a;
     border-bottom: 1px solid white;
     background-color: rgb(116,80,131);
@@ -347,6 +366,10 @@ footer {
     height: 1px;
     background: #21333b;
     border-bottom: 1px solid #12191f;
+}
+
+.newsContent {
+   height: 528px;
 }
 
 .newsArticle {
@@ -399,32 +422,32 @@ footer {
     position: absolute;
     top: 4px;
     left: -49px;
-    width: 25px;
+    width: 24px;
     height: 24px;
     background-image: url(../img/sprite.svg);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 0 -1px;
 }
 
 .newsArticle--icon_cloud:before {
     content: '';
-    display: inline-block;
     position: absolute;
+    top: 3px;
     left: -49px;
-    width: 25px;
+    width: 28px;
     height: 24px;
     background-image: url(../img/sprite.svg);
     background-repeat: no-repeat;
-    background-position: -50px 0;
+    background-position: -49px -2px;
 }
 
 .newsArticle--icon_music:before {
     content: '';
     position: absolute;
-    left: -49px;
     top: 4px;
-    width: 25px;
-    height: 24px;
+    left: -49px;
+    width: 23px;
+    height: 25px;
     background-image: url(../img/sprite.svg);
     background-repeat: no-repeat;
     background-position: -25px 0;
@@ -441,6 +464,10 @@ footer {
 }
 
 /*MAIN CONTENT*/
+
+.mainContent {
+    padding-top: 69px;
+}
 
 .blog {
     margin-left: 44px;
@@ -530,12 +557,8 @@ footer {
 
 .updates {
     position: relative;
-    height: 355px;
+    height: 356px;
     margin-top: 89px;
-    border-bottom: 1px solid #e6e6e6;
-    -webkit-box-shadow: 0px 1px 0px 0px #fefefe;
-    -moz-box-shadow: 0px 1px 0px 0px #fefefe;
-    box-shadow: 0px 1px 0px 0px #fefefe;
 }
 
 .updates__header {
@@ -600,7 +623,7 @@ footer {
 .updates__link:visited {
     position: absolute;
     right: 26px;
-    bottom: 88px;
+    bottom: 89px;
     color: #454545;
     font-family: 'League Gothic', 'Open Sans', 'Arial', sans-serif;
     font-size: 18px;
@@ -615,6 +638,12 @@ footer {
     transition: 0.4s linear;
 }
 
+/*text to be shown at widest resolution*/
+
+.hidden {
+    display: none;
+}
+
  /*pixel adjustment*/
 
 .updatesPost--picture_2 {
@@ -627,8 +656,15 @@ footer {
 
 
 .sponsors {
+    border-top: 1px solid #fefefe;
+    -webkit-box-shadow: 0px -1px 0px 0px #e6e6e6;
+    -moz-box-shadow: 0px -1px 0px 0px #e6e6e6;
+    box-shadow: 0px -1px 0px 0px #e6e6e6;
+}
+
+.sponsorsContent {
     width: 238px;
-    padding-top: 52px;
+    padding-top: 51px;
     padding-bottom: 15px;
     margin: 0 auto;
     line-height: 0px;
@@ -682,11 +718,14 @@ footer {
 
 .newCategories {
     display: none;
+    border-top: 1px solid #d8d8d8;
+    background: #ececec;
+}
+
+.newCategoriesContent {
     height: 499px;
     padding-top: 79px;
     padding-bottom: 90px;
-    border-top: 1px solid #d8d8d8;
-    background: #ececec;
 }
 
 .newCategory {
@@ -704,6 +743,21 @@ footer {
     font-size: 24px;
     text-transform: uppercase;
     text-shadow: 1px 1px #fff;
+}
+
+.newCategory__subheader {
+    display: none;
+    line-height: 24px;
+    color: #c5c5c5;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    font-style: italic;
+    text-shadow: 1px 1px #fff;
+    letter-spacing: -0.1px;
+}
+
+.newCategory__img {
+    display: none;
 }
 
 .newCategory__paragraph {
