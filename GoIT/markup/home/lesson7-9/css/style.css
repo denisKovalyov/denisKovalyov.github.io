@@ -405,8 +405,8 @@ header {
 }
 
 .newsArticle__link:hover,
-.newArticle__link:active,
-.newArticle__link:focus {
+.newsArticle__link:active,
+.newsArticle__link:focus {
     outline: none;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
     transition: 0.2s linear;

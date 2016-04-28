@@ -19,13 +19,13 @@
 	<header>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-4">	
+				<div class="col-md-3">	
 					<div class="logo">
 						<img src="img/logo.png" width="152" height="39" alt="Pingbuller_logo" title="Pingbuller">
 						<h1 class="logo__h1">Pingbuller</h1>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-9">
 					<nav>
 						<ul class="mainMenu">
 							<li class="mainMenu__item"><a href="#" class="mainMenu__link">home</a>
@@ -61,7 +61,7 @@
 					Semper sollicitudin gravida eget, ves&shy;tibulum sit amet sapien. Nunc dignis&shy;sim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. <span class="letter_spacing">Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</span>
 				</p>
 				<div class="slider__imgContainer">
-					<img src="img/iphone.png" class="sliderContent__img" alt="iphone" title="iphone">
+					<img src="img/iphone.png" class="slider__img" alt="iphone" title="iphone">
 				</div>
 
 				<div class="sliderNavigation sliderNavigation--mainSlider">
@@ -150,7 +150,7 @@
 							<p class="updatesPost__paragraph">Posted by Admin on March 13 2012 in Blog Updates</p>
 						</article>
 						
-						<a href="#" class="updates__link"><span class="shown">more blog posts</span><span class="hidden">read more here</span></a>
+						<a href="#" class="updates__link"><span class="shown">more blog posts</span><span class="hidden__element">read more here</span></a>
 					</section>
 				</div><!-- col-sm-6 -->
 			</div><!-- row -->
@@ -171,14 +171,31 @@
 	<div class="newCategories">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-4" style="background: red">
-				.col-md-4
+				<div class="col-sm-4">
+					<article class="newCategory">
+						<h2 class="newCategory__header"><span class="shown">NEWS CATEGORIES</span></h2>
+						<img src="img/logo--grayscale.png" width="133" height="37" class="newCategory__img" alt="Pigbuller" title="Pingbuller">
+						<h3 class="newCategory__subheader">Copyright 2013, Pingbull AS</h3>
+						<p class="newCategory__paragraph">
+							Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellen&shy;tesque pul&shy;vinar. Quisque urna risus, mattis pulvi&shy;nar biben&shy;dum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+					</article>
 				</div>
-				<div class="col-sm-4" style="background: blue">
-				.col-md-4
+				<div class="col-sm-4">
+					<article class="newCategory newCategory--second">
+						<h2 class="newCategory__header"><span class="shown">NEWS CATEGORIES</span><span class="hidden__element">RECENT COMMENTS</span></h2>
+						<p class="newCategory__paragraph">
+							Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellen&shy;tesque pul&shy;vinar. Quisque urna risus, mattis pulvi&shy;nar biben&shy;dum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+					</article>
 				</div>
-				<div class="col-sm-4" style="background: aqua">
-				.col-md-4
+				<div class="col-sm-4">
+					<article class="newCategory newCategory--third">
+						<h2 class="newCategory__header">NEWS CATEGORIES</h2>
+						<p class="newCategory__paragraph">
+							Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellen&shy;tesque pul&shy;vinar. Quisque urna risus, mattis pulvi&shy;nar biben&shy;dum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+						</p>
+					</article>
 				</div>
 			</div><!-- row -->
 		</div><!-- container-fluid -->
@@ -187,7 +204,7 @@
 	<footer>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-8">
 					<ul class="footerMenu clearfix">
 						<li class="footerMenu__item"><a href="#" class="footerMenu__link">home</a></li>
 						<li class="footerMenu__item"><a href="#" class="footerMenu__link">about</a></li>
@@ -198,7 +215,7 @@
 					</ul>
 				</div>
 
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<p class="footer__paragraph">
 					Designed by <span class="bold">Pingbull AS</span>
 					</p>
