@@ -1,49 +1,56 @@
 // Exponentiation
 
-var x, n;
+var x, n, result;
 
 function exponentiation() {
-	dataEntering ();
-	validation();
-	pow (x, n);
+	if(!dataEntering()) return;
+	pow(x, n);
+	display();
 }
 
 function dataEntering() {
-	x = parseInt( prompt('Введите число для возведения в степень', '') );
-	n = parseInt( prompt('Введите степень', '') );
+	x = prompt('Введите число для возведения в степень или нажмите "Отмена"', '');
+	x = validation(x);
+	if(!x && x !== 0) return;
+
+	n = prompt('Введите степень', '');
+	n = validation(n);
+	if(!n && n !== 0) return;
+
+	return true;
 }
 
-function validation() {
-	if (isNaN(x)) {
+function validation(n) {
+	if (isNaN(+n) || n === '') {
 		do {
-			x = parseInt( prompt('Пожалуйста, введите корректное значение числа для возведения в степень', '') );
-		} while (isNaN(x));
-	}
+			n = prompt('Пожалуйста, введите корректное числовое значение или нажмите "Отмена"', '');
+		} while (isNaN(+n) || n === '');
+	};
 
-	if (isNaN(n)) {
-		do {
-			n = parseInt( prompt('Пожалуйста, введите числовое значение степени', '') );
-		} while (isNaN(n));
-	}
+	if (n === null) return;
+	return +n;
 }
 
 function pow(base, exponent) {
-	var result = 1;
+	result = 1;
 	
 	if (exponent > 0) {
-	for (i = 0; i < exponent; i++) {
-		result *=base;
-	}
+		for (i = 0; i < exponent; i++) {
+			result *=base;
+		}
+	} else if (exponent === 0 && base === 0) {
+		result = 'Выражение лишено смысла';
 	} else {
 		for (i = 0; i > exponent; i--) {
-		result *=base;
+			result *=base;
+		}
+		result = 1/result;
 	}
-	result = 1/result;
-	}
+	return result;
+}
 
-	// alert(base + ' в степени '+ exponent + ' равно: ' + result); как вариант
-
-	console.log(base + ' в степени '+ exponent + ' равно: ' + result);
+function display() {
+	console.log(x + ' в степени '+ n + ' равно: ' + result);
 }
 
 // Arrays and loops
@@ -52,11 +59,11 @@ var array = [];
 
 var userName, flag = false;
 
-function unitedFunctionForUserNameCheck() {
+function userNameCheck() {
 	arrayFilling();
 	userNameEntering();
 	determineFlag();
-	userNameCheck();
+	accessCheck();
 }
 
 function arrayFilling() {
@@ -70,20 +77,18 @@ function userNameEntering() {
 }
 
 function determineFlag() {
-	for (var j = 0; j < array.length; j++) {
-		if (array[j] === userName) {
+	for (var i = 0; i < array.length; i++) {
+		if (array[i] === userName) {
 			flag = true;
 			break;
 		}
 	}
 }
 
-function userNameCheck() {
+function accessCheck() {
 	if (flag) {
 			alert(userName + ', вы успешно вошли.');
 		} else {
 			alert('Извините, такого пользователя не существует.');
 		}
 }
-
-
