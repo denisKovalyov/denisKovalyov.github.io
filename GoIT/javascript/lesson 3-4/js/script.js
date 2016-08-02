@@ -139,7 +139,6 @@ var app = {
 				var label = this.createElement({
 					tagName: 'label',
 					content: 'Варинат ответа №' + (j + 1),
-
 					parentElement: insertedLi,
 				});
 
@@ -160,9 +159,7 @@ var app = {
 
 };
 
-var body = document.querySelector('body');
-
-function generateDOM() {
+function handler() {
 
 	app.createElement({
 	  tagName: 'h1',
@@ -175,15 +172,19 @@ function generateDOM() {
 
 	app.createElement({
 	  tagName: 'input',
-	  inputType: 'submit',
 	  className: 'btn btn-primary btn-lg center-block',
 	  attributes: {
 	  	type: 'submit',
 	  	value: 'Проверить мои резульаты',
 	  },
-	  parentElement: document.documentElement.querySelector('form'),
+	  parentElement: document.querySelector('form'),
 	});
 
-	body.removeChild(document.body.querySelector('button'));
+	body.removeChild(button);
 
 };
+
+var body = document.querySelector('body');
+var button = document.querySelector('button');
+
+button.addEventListener('click', handler);
