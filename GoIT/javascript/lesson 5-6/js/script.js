@@ -1,6 +1,7 @@
 // Объявляем глобальные переменные: изначальная точка отсчета вермени, значения секунд, минут, часов;
 
 var initialTime, timerId;
+
 var millisecValue = 0;
 var secValue = 0;
 var minValue = 0;
@@ -21,6 +22,7 @@ var hours = document.querySelector('.hours');
 // переменные кнопок управления секундомером
 
 var startButton = document.getElementById('start');
+var splitButton = document.getElementById('split');
 var clearButton = document.getElementById('clear');
 
 // переменная определяющая состояние кнопки "Start/Pause/Continue"
@@ -103,7 +105,7 @@ function runStopwatch() {
 	initialTime = new Date; 								// При клике задаем значение начальной точки отсчета времени
 	timerId = setInterval(stopwatch, 1);
 
-	startButton.value = state = 'Pause';
+	startButton.value = state = 'Stop';
 	startButton.classList.remove('btn-primary');
 	startButton.classList.add('btn-info');
 };
@@ -111,9 +113,10 @@ function runStopwatch() {
 function pauseStopwatch() {
 
 	clearInterval(timerId);
-	
 	pausePressed = new Date;
 
+	split();
+	
 	startButton.value = state = 'Continue';
 	startButton.classList.remove('btn-info');
 	startButton.classList.add('btn-success');
@@ -126,8 +129,8 @@ function continueStopwatch() {
 	// Определяем время в режиме паузы
 	continuePressed = new Date;
 	frozenTime += continuePressed.getTime() - pausePressed.getTime();
-	console.log(frozenTime);
-	startButton.value = state = 'Pause';
+
+	startButton.value = state = 'Stop';
 	startButton.classList.remove('btn-success');
 	startButton.classList.add('btn-info');
 };
@@ -140,7 +143,7 @@ function handler() {
 			runStopwatch();
 			break;
 
-		case 'Pause':
+		case 'Stop':
 			pauseStopwatch();
 			break;
 
@@ -155,16 +158,19 @@ function clear() {
 	clearInterval(timerId);
 	
 	// Обнуляем счетчики
+	millisecValue = 0;
 	secValue = 0;
 	minValue = 0;
 	hoursValue = 0;
 	frozenTime = 0;
 
-	// Обнуляем цифры в HTML
+	// Обнуляем цифры в HTML и убираем все интервалы
 	millisec.innerHTML = '00';
 	sec.innerHTML = '00';
 	min.innerHTML = '00';
 	hours.innerHTML = '00';
+
+	document.querySelector('.intervals').innerHTML = '';
 
 	// Обнуляем кнопку "Start/Pause/Continue"
 	startButton.value = state = 'Start';
@@ -173,6 +179,29 @@ function clear() {
 	startButton.classList.add('btn-primary');
 };
 
+function split(event) {
+
+	if (state != 'Stop') return;
+
+	var div = document.createElement('div');
+	div.className = 'split';
+
+	var millisec;
+	
+	if (millisecValue < 10) millisec = '00' + millisecValue;
+	else if (millisecValue < 100) millisec = '0' + millisecValue;
+	else millisec = millisecValue;
+
+
+	// Проверяем каким образом вызвалась функция: через событие "клик" (event == true) или вызвана в контексте выполнения другой функции
+
+	var context = event ? '.Split ' : '.Stop ';
+
+	div.innerHTML = (document.querySelectorAll('.split').length + 1) + context + hours.innerHTML + ':' + min.innerHTML + ':' + sec.innerHTML + '.' + millisec;
+	document.querySelector('.intervals').appendChild(div);
+}
+
 
 startButton.addEventListener('click', handler);
 clearButton.addEventListener('click', clear);
+splitButton.addEventListener('click', split);
