@@ -1,4 +1,4 @@
-// Объявляем глобальные переменные - изначальная точка отсчета вермени (пока не задаем значение), значения секунд, минут, часов;
+// Объявляем глобальные переменные: изначальная точка отсчета вермени (пока не задаем значение), значения секунд, минут, часов;
 
 var initialTime, timerId;
 var millisecValue = 0;
@@ -28,18 +28,17 @@ function stopwatch() {
 
 	// Рассчитываем количество миллисекунд от начальной точки отсчета
 	
-	millisecValue += currentTime.getTime() - initialTime.getTime();
+	millisecValue = currentTime.getTime() - initialTime.getTime() - secValue * 1000 - minValue * 60 * 1000 - hoursValue * 60 * 60 * 1000;
 
 	if (millisecValue > 999) {
 			
 		millisecValue -= 1000;
 		millisec.innerHTML = millisecValue;
-		initialTime = new Date;				// Если прошла секунда (1000 мс) устанавливаем новую точку отсчета
-		secondsRun();									// и плюсуем секунду запуском соответсвующей функции
+
+		secondsRun();										// Если прошла секунда (1000 мс) плюсуем секунду запуском соответсвующей функции
 
 	} else {
 		millisec.innerHTML = millisecValue;
-		millisecValue = 0;
 	}
 
 	function secondsRun() {		
@@ -86,19 +85,17 @@ function stopwatch() {
 
 		if (hoursValue < 10) {
 
-			hours.innerHTML = '0' + hoursValue;		// Значения суток и т.д. предусматривать не будем
-																						// Но, в случае необходимости, руководствуясь описаной логикой легко можно добавить и дни
+			hours.innerHTML = '0' + hoursValue;
+				
 		} else {
-
 			hours.innerHTML = hoursValue;
-
 		}
 	};
 };
 
 function runStopwatch() {
 	
-	initialTime = new Date; 									// При клике задаем значение начальной точки отсчета времени
+	initialTime = new Date; 								// При клике задаем значение начальной точки отсчета времени
 	timerId = setInterval(stopwatch, 1);
 
 	startButton.value = state = 'Pause';
@@ -110,7 +107,6 @@ function freezeStopwatch() {
 
 	clearInterval(timerId);
 	
-
 	startButton.value = state = 'Continue';
 	startButton.classList.remove('btn-info');
 	startButton.classList.add('btn-success');
@@ -118,7 +114,6 @@ function freezeStopwatch() {
 
 function continueStopwatch() {
 
-	initialTime = new Date;
 	timerId = setInterval(stopwatch, 1);
 
 	startButton.value = state = 'Pause';
@@ -158,6 +153,12 @@ function clear() {
 	sec.innerHTML = '00';
 	min.innerHTML = '00';
 	hours.innerHTML = '00';
+
+	// Обнуляем кнопку "Start/Pause/Continue"
+	startButton.value = state = 'Start';
+	startButton.classList.remove('btn-success');
+	startButton.classList.remove('btn-info');
+	startButton.classList.add('btn-primary');
 };
 
 
