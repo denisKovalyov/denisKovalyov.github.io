@@ -1,10 +1,15 @@
-// Объявляем глобальные переменные: изначальная точка отсчета вермени (пока не задаем значение), значения секунд, минут, часов;
+// Объявляем глобальные переменные: изначальная точка отсчета вермени, значения секунд, минут, часов;
 
 var initialTime, timerId;
 var millisecValue = 0;
 var secValue = 0;
 var minValue = 0;
 var hoursValue = 0;
+
+// вспомогательные переменные для определения значения времени в режиме паузы
+
+var pausePressed, continuePressed;
+var frozenTime = 0;
 
 // переменные соответсвующих DOM - элементов
 
@@ -28,7 +33,7 @@ function stopwatch() {
 
 	// Рассчитываем количество миллисекунд от начальной точки отсчета
 	
-	millisecValue = currentTime.getTime() - initialTime.getTime() - secValue * 1000 - minValue * 60 * 1000 - hoursValue * 60 * 60 * 1000;
+	millisecValue = currentTime.getTime() - initialTime.getTime() - frozenTime - secValue * 1000 - minValue * 60 * 1000 - hoursValue * 60 * 60 * 1000;
 
 	if (millisecValue > 999) {
 			
@@ -103,10 +108,12 @@ function runStopwatch() {
 	startButton.classList.add('btn-info');
 };
 
-function freezeStopwatch() {
+function pauseStopwatch() {
 
 	clearInterval(timerId);
 	
+	pausePressed = new Date;
+
 	startButton.value = state = 'Continue';
 	startButton.classList.remove('btn-info');
 	startButton.classList.add('btn-success');
@@ -116,6 +123,10 @@ function continueStopwatch() {
 
 	timerId = setInterval(stopwatch, 1);
 
+	// Определяем время в режиме паузы
+	continuePressed = new Date;
+	frozenTime += continuePressed.getTime() - pausePressed.getTime();
+	console.log(frozenTime);
 	startButton.value = state = 'Pause';
 	startButton.classList.remove('btn-success');
 	startButton.classList.add('btn-info');
@@ -130,7 +141,7 @@ function handler() {
 			break;
 
 		case 'Pause':
-			freezeStopwatch();
+			pauseStopwatch();
 			break;
 
 		case 'Continue':
@@ -147,7 +158,8 @@ function clear() {
 	secValue = 0;
 	minValue = 0;
 	hoursValue = 0;
-	
+	frozenTime = 0;
+
 	// Обнуляем цифры в HTML
 	millisec.innerHTML = '00';
 	sec.innerHTML = '00';
