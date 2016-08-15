@@ -1,3 +1,7 @@
+body {
+	overflow-y: scroll;
+}
+
 .display {
 	position: relative;
 	margin-top: 20px;

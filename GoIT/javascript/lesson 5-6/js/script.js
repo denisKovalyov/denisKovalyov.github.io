@@ -12,7 +12,7 @@ var hoursValue = 0;
 var pausePressed, continuePressed;
 var frozenTime = 0;
 
-// переменные соответсвующих DOM - элементов
+// переменные соответсвующих DOM-элементов
 
 var millisec = document.querySelector('.milliseconds');
 var sec = document.querySelector('.seconds');
@@ -30,12 +30,12 @@ var clearButton = document.getElementById('clear');
 var state = startButton.value;
 
 function stopwatch() {
-	
-	var currentTime = new Date;
+
+	var currentTime = Date.now();
 
 	// Рассчитываем количество миллисекунд от начальной точки отсчета
 	
-	millisecValue = currentTime.getTime() - initialTime.getTime() - frozenTime - secValue * 1000 - minValue * 60 * 1000 - hoursValue * 60 * 60 * 1000;
+	millisecValue = currentTime - initialTime - frozenTime - secValue * 1000 - minValue * 60 * 1000 - hoursValue * 60 * 60 * 1000;
 
 	if (millisecValue > 999) {
 			
@@ -102,7 +102,7 @@ function stopwatch() {
 
 function runStopwatch() {
 	
-	initialTime = new Date; 								// При клике задаем значение начальной точки отсчета времени
+	initialTime = Date.now(); 								// При клике задаем значение начальной точки отсчета времени
 	timerId = setInterval(stopwatch, 1);
 
 	startButton.value = state = 'Stop';
@@ -113,7 +113,7 @@ function runStopwatch() {
 function pauseStopwatch() {
 
 	clearInterval(timerId);
-	pausePressed = new Date;
+	pausePressed = Date.now();
 
 	split();
 	
@@ -127,8 +127,8 @@ function continueStopwatch() {
 	timerId = setInterval(stopwatch, 1);
 
 	// Определяем время в режиме паузы
-	continuePressed = new Date;
-	frozenTime += continuePressed.getTime() - pausePressed.getTime();
+	continuePressed = Date.now();
+	frozenTime += continuePressed - pausePressed;
 
 	startButton.value = state = 'Stop';
 	startButton.classList.remove('btn-success');
@@ -191,7 +191,6 @@ function split(event) {
 	if (millisecValue < 10) millisec = '00' + millisecValue;
 	else if (millisecValue < 100) millisec = '0' + millisecValue;
 	else millisec = millisecValue;
-
 
 	// Проверяем каким образом вызвалась функция: через событие "клик" (event == true) или вызвана в контексте выполнения другой функции
 
