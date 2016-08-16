@@ -1,206 +1,190 @@
-// Объявляем глобальные переменные: изначальная точка отсчета вермени, значения секунд, минут, часов;
+var stopwatch = {
 
-var initialTime, timerId;
+	// Basic values of milliseconds, seconds, minutes and hours (and auxiliary variable for storage time during 'Pause')
+	milliseconds: 0,
+	seconds: 0,
+	minutes: 0,
+	hours: 0,
 
-var millisecValue = 0;
-var secValue = 0;
-var minValue = 0;
-var hoursValue = 0;
-
-// вспомогательные переменные для определения значения времени в режиме паузы
-
-var pausePressed, continuePressed;
-var frozenTime = 0;
-
-// переменные соответсвующих DOM-элементов
-
-var millisec = document.querySelector('.milliseconds');
-var sec = document.querySelector('.seconds');
-var min = document.querySelector('.minutes');
-var hours = document.querySelector('.hours');
-
-// переменные кнопок управления секундомером
-
-var startButton = document.getElementById('start');
-var splitButton = document.getElementById('split');
-var clearButton = document.getElementById('clear');
-
-// переменная определяющая состояние кнопки "Start/Pause/Continue"
-
-var state = startButton.value;
-
-function stopwatch() {
-
-	var currentTime = Date.now();
-
-	// Рассчитываем количество миллисекунд от начальной точки отсчета
+	initialTime: 0,
+	timerId: 0,
+	pausePressed: 0,
+	frozenTime: 0,
 	
-	millisecValue = currentTime - initialTime - frozenTime - secValue * 1000 - minValue * 60 * 1000 - hoursValue * 60 * 60 * 1000;
+	// DOM-elements
+	elements: {
+		milliseconds: document.querySelector('.milliseconds'),
+		seconds: document.querySelector('.seconds'),
+		minutes: document.querySelector('.minutes'),
+		hours: document.querySelector('.hours'),
+	},
 
-	if (millisecValue > 999) {
-			
-		millisecValue -= 1000;
-		millisec.innerHTML = millisecValue;
+	// Control buttons
+	buttons: {
+		startButton: document.getElementById('start'),
+		splitButton: document.getElementById('split'),
+		clearButton: document.getElementById('clear'),
+	},
 
-		secondsRun();										// Если прошла секунда (1000 мс) плюсуем секунду запуском соответсвующей функции
+	runStopwatch: function(event) {
+		// Determine initial count point by click on 'Start' button
+		if (event) this.initialTime = Date.now(); 	
+		this.timerId = setInterval(run, 1);
 
-	} else {
-		millisec.innerHTML = millisecValue;
+		var that = this;
+		
+		function run() {
+			var currentTime = Date.now();
+
+			// Amount of milliseconds since initial count point
+			that.milliseconds = currentTime - that.initialTime - that.frozenTime - that.seconds * 1000 - that.minutes * 60 * 1000 + that.hours * 60 * 60 * 1000;
+
+			if (that.milliseconds > 999) {
+
+				that.milliseconds -= 1000;
+				that.elements.milliseconds.innerHTML = that.milliseconds;
+
+			// If second have passed (1000 ms) add one second by launching appropriate method
+				secondsRun();
+			} else {
+				that.elements.milliseconds.innerHTML = that.milliseconds;
+			}
+
+			function secondsRun() {
+				++that.seconds;
+
+				if (that.seconds < 10) {
+					that.elements.seconds.innerHTML = '0' + that.seconds;
+				} else if (that.seconds > 59) {
+					that.elements.seconds.innerHTML = '00';
+					that.seconds = 0;
+					
+					// If 60 seconds have been accumulated, add one minute and reset seconds to 0 (further minutes and hours similarly)
+					minRun();										
+
+				}	else {
+					that.elements.seconds.innerHTML = that.seconds;
+				}
+			}
+
+			function minRun() {
+				++that.minutes;
+
+				if (that.minutes < 10) {
+					that.elements.minutes.innerHTML = '0' + that.minutes;
+				} else if (that.minutes > 59) {
+					that.elements.minutes.innerHTML = '00';
+					that.minutes = 0;
+					
+					hoursRun();
+				} else {
+					that.elements.minutes.innerHTML = that.minutes;
+				}
+			}
+
+			function hoursRun() {
+				++that.hours;
+
+				if (that.hours < 10) {
+					that.elements.hours.innerHTML = '0' + that.hours;
+				} else {
+					that.elements.hours.innerHTML = that.hours;
+				}
+			}
+		};
+
+		this.buttons.startButton.value = 'Stop';
+		this.buttons.startButton.classList.remove('btn-primary');
+		this.buttons.startButton.classList.add('btn-info');
+	},
+
+	pauseStopwatch: function() {
+		clearInterval(this.timerId);
+		this.pausePressed = Date.now();
+
+		this.split();
+		
+		this.buttons.startButton.value = 'Continue';
+		this.buttons.startButton.classList.remove('btn-info');
+		this.buttons.startButton.classList.add('btn-success');
+	},
+
+	continueStopwatch: function() {
+		// Define time of pause
+		this.frozenTime += Date.now() - this.pausePressed;
+
+		this.runStopwatch();
+		
+		this.buttons.startButton.value = 'Stop';
+		this.buttons.startButton.classList.remove('btn-success');
+		this.buttons.startButton.classList.add('btn-info');
+	},
+
+	clear: function() {
+		clearInterval(stopwatch.timerId);
+		
+		// Counters set to zero
+		stopwatch.milliseconds = 0;
+		stopwatch.seconds = 0;
+		stopwatch.minutes = 0;
+		stopwatch.hours = 0;
+		stopwatch.frozenTime = 0;
+
+		// Reset HTML and deleting all measured intervals
+		stopwatch.elements.milliseconds.innerHTML = '00';
+		stopwatch.elements.seconds.innerHTML = '00';
+		stopwatch.elements.minutes.innerHTML = '00';
+		stopwatch.elements.hours.innerHTML = '00';
+
+		document.querySelector('.intervals').innerHTML = '';
+
+		// Refresh "Start/Pause/Continue" button
+		stopwatch.buttons.startButton.value = 'Start';
+		stopwatch.buttons.startButton.classList.remove('btn-success');
+		stopwatch.buttons.startButton.classList.remove('btn-info');
+		stopwatch.buttons.startButton.classList.add('btn-primary');
+	},
+
+	split: function(event) {
+		if (stopwatch.buttons.startButton.value != 'Stop') return;
+
+		var div = document.createElement('div');
+		div.className = 'split';
+
+		var millisec;
+		
+		if (stopwatch.milliseconds < 10) millisec = '00' + stopwatch.milliseconds;
+		else if (stopwatch.milliseconds < 100) millisec = '0' + stopwatch.milliseconds;
+		else millisec = stopwatch.milliseconds;
+
+		// Check how the function was called: by 'click' event (event == true) or by execution of 'pauseStopwatch' method
+		var context = event ? '.Split ' : '.Stop ';
+
+		div.innerHTML = (document.querySelectorAll('.split').length + 1) + context + stopwatch.elements.hours.innerHTML + ':' + 
+		stopwatch.elements.minutes.innerHTML + ':' + stopwatch.elements.seconds.innerHTML + '.' + millisec;
+		document.querySelector('.intervals').appendChild(div);
 	}
-
-	function secondsRun() {		
-	
-		++secValue;
-
-		if (secValue < 10) {
-
-			sec.innerHTML = '0' + secValue;
-
-		} else if (secValue > 59) {
-			
-			sec.innerHTML = '00';
-			secValue = 0;
-			minRun();										// Накопилось 60 секунд - плюсуем минуту и сбарсываем секунды на 0 (далее минуты и часы по аналогии)
-
-		}	else {
-			sec.innerHTML = secValue;
-		}
-	};
-
-	function minRun() {
-
-		++minValue;
-
-		if (minValue < 10) {
-
-			min.innerHTML = '0' + minValue;
-
-		} else if (minValue > 59) {
-
-			min.innerHTML = '00';
-			minValue = 0;
-			hoursRun();
-
-		} else {
-			min.innerHTML = minValue;
-		}
-	};
-
-	function hoursRun() {
-
-		++hoursValue;
-
-		if (hoursValue < 10) {
-
-			hours.innerHTML = '0' + hoursValue;
-				
-		} else {
-			hours.innerHTML = hoursValue;
-		}
-	};
 };
 
-function runStopwatch() {
-	
-	initialTime = Date.now(); 								// При клике задаем значение начальной точки отсчета времени
-	timerId = setInterval(stopwatch, 1);
-
-	startButton.value = state = 'Stop';
-	startButton.classList.remove('btn-primary');
-	startButton.classList.add('btn-info');
-};
-
-function pauseStopwatch() {
-
-	clearInterval(timerId);
-	pausePressed = Date.now();
-
-	split();
-	
-	startButton.value = state = 'Continue';
-	startButton.classList.remove('btn-info');
-	startButton.classList.add('btn-success');
-};
-
-function continueStopwatch() {
-
-	timerId = setInterval(stopwatch, 1);
-
-	// Определяем время в режиме паузы
-	continuePressed = Date.now();
-	frozenTime += continuePressed - pausePressed;
-
-	startButton.value = state = 'Stop';
-	startButton.classList.remove('btn-success');
-	startButton.classList.add('btn-info');
-};
 
 function handler() {
 
-	switch (state) {
+	switch (stopwatch.buttons.startButton.value) {
 
 		case 'Start':
-			runStopwatch();
+			stopwatch.runStopwatch(event);
 			break;
 
 		case 'Stop':
-			pauseStopwatch();
+			stopwatch.pauseStopwatch();
 			break;
 
 		case 'Continue':
-			continueStopwatch();
+			stopwatch.continueStopwatch();
 			break;
 	}
 };
 
-function clear() {
-
-	clearInterval(timerId);
-	
-	// Обнуляем счетчики
-	millisecValue = 0;
-	secValue = 0;
-	minValue = 0;
-	hoursValue = 0;
-	frozenTime = 0;
-
-	// Обнуляем цифры в HTML и убираем все интервалы
-	millisec.innerHTML = '00';
-	sec.innerHTML = '00';
-	min.innerHTML = '00';
-	hours.innerHTML = '00';
-
-	document.querySelector('.intervals').innerHTML = '';
-
-	// Обнуляем кнопку "Start/Pause/Continue"
-	startButton.value = state = 'Start';
-	startButton.classList.remove('btn-success');
-	startButton.classList.remove('btn-info');
-	startButton.classList.add('btn-primary');
-};
-
-function split(event) {
-
-	if (state != 'Stop') return;
-
-	var div = document.createElement('div');
-	div.className = 'split';
-
-	var millisec;
-	
-	if (millisecValue < 10) millisec = '00' + millisecValue;
-	else if (millisecValue < 100) millisec = '0' + millisecValue;
-	else millisec = millisecValue;
-
-	// Проверяем каким образом вызвалась функция: через событие "клик" (event == true) или вызвана в контексте выполнения другой функции
-
-	var context = event ? '.Split ' : '.Stop ';
-
-	div.innerHTML = (document.querySelectorAll('.split').length + 1) + context + hours.innerHTML + ':' + min.innerHTML + ':' + sec.innerHTML + '.' + millisec;
-	document.querySelector('.intervals').appendChild(div);
-}
-
-
-startButton.addEventListener('click', handler);
-clearButton.addEventListener('click', clear);
-splitButton.addEventListener('click', split);
+stopwatch.buttons.startButton.addEventListener('click', handler);
+stopwatch.buttons.clearButton.addEventListener('click', stopwatch.clear);
+stopwatch.buttons.splitButton.addEventListener('click', stopwatch.split);
