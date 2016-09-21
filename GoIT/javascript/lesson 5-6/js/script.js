@@ -29,15 +29,13 @@ var stopwatch = {
 	runStopwatch: function(event) {
 		// Determine initial count point by click on 'Start' button
 		if (event) this.initialTime = Date.now(); 	
-		this.timerId = setInterval(run, 1);
 
 		var that = this;
 		
-		function run() {
-			var currentTime = Date.now();
+		this.timerId = setTimeout(function run() {
 
 			// Amount of milliseconds since initial count point
-			that.milliseconds = currentTime - that.initialTime - that.frozenTime - that.seconds * 1000 - that.minutes * 60 * 1000 + that.hours * 60 * 60 * 1000;
+			that.milliseconds =  Date.now() - that.initialTime - that.frozenTime - that.seconds * 1000 - that.minutes * 60 * 1000 + that.hours * 60 * 60 * 1000;
 
 			if (that.milliseconds > 999) {
 
@@ -91,7 +89,9 @@ var stopwatch = {
 					that.elements.hours.innerHTML = that.hours;
 				}
 			}
-		};
+
+			that.timerId = setTimeout(run, 1);
+		}, 1);
 
 		this.buttons.startButton.value = 'Stop';
 		this.buttons.startButton.classList.remove('btn-primary');
@@ -99,7 +99,7 @@ var stopwatch = {
 	},
 
 	pauseStopwatch: function() {
-		clearInterval(this.timerId);
+		clearTimeout(this.timerId);
 		this.pausePressed = Date.now();
 
 		this.split();
@@ -121,7 +121,7 @@ var stopwatch = {
 	},
 
 	clear: function() {
-		clearInterval(stopwatch.timerId);
+		clearTimeout(stopwatch.timerId);
 		
 		// Counters set to zero
 		stopwatch.milliseconds = 0;
