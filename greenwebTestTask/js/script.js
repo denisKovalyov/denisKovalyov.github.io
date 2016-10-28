@@ -6,6 +6,7 @@ $(function() {
     dataType : 'html',
     success: function(svg) {
       $('body').prepend(svg);
+      alert('test sprite');
     },
   });
 });
@@ -16,6 +17,7 @@ $(function() {
     dataType : 'html',
     success: function(svg) {
       $('.title').prepend(svg);
+      alert('test text');
     },
   });
 });
