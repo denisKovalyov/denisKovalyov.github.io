@@ -28,6 +28,7 @@ var stopwatch = {
 
 	runStopwatch: function(event) {
 		// Determine initial count point by click on 'Start' button
+
 		if (event) this.initialTime = Date.now(); 	
 
 		var that = this;
@@ -166,12 +167,12 @@ var stopwatch = {
 	}
 };
 
-
-function handler() {
+function handler(event) {
 
 	switch (stopwatch.buttons.startButton.value) {
 
 		case 'Start':
+
 			stopwatch.runStopwatch(event);
 			break;
 
