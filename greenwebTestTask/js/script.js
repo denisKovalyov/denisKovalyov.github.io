@@ -2,22 +2,20 @@
 
 $(function() {
   $.ajax({
-    url: '/img/sprite.svg',
+    url: '../img/sprite.svg',
     dataType : 'html',
     success: function(svg) {
       $('body').prepend(svg);
-      alert('test sprite');
     },
   });
 });
 
 $(function() {
   $.ajax({
-    url: '/img/svg_text.svg',
+    url: '../img/svg_text.svg',
     dataType : 'html',
     success: function(svg) {
       $('.title').prepend(svg);
-      alert('test text');
     },
   });
 });
