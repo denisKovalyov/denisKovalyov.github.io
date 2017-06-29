@@ -32,7 +32,7 @@ $(function() {
 // Show/hide hints
 
 $(function() {
-	$('input[type="text"], input[type="email"').hover(function() {
+	$('input[type="text"], input[type="email"]').hover(function() {
 		
 		switch ( $(this).attr('name')) {
 			case 'firstname': 
