@@ -4,6 +4,13 @@ main {
     height: 100%;
 }
 
+.svg_sprite {
+    position: absolute;
+    display: hidden;
+    top: -9999px;
+    left: -9999px;
+}
+
 /*
 This is the visible area of you carousel.
 Set a width here to define how much items are visible.
@@ -23,9 +30,9 @@ You must ensure that the position is relative or absolute and
 that the width is big enough to contain all items.
 */
 .jcarousel ul {
+    position: relative;
     width: 20000em;
     height: 100%;
-    position: relative;
 
     /* Optional, required in this case since it's a <ul> element */
     list-style: none;
@@ -40,8 +47,6 @@ have a fixed width and height (but it's not required).
 .jcarousel li {
     /* Required only for block elements like <li>'s */
     float: left;
-    width: 100%;
-    max-width: 1920px;
     height: 100%;
 }
 
@@ -58,6 +63,10 @@ have a fixed width and height (but it's not required).
 .slide_3 {
     background: url(../img/jack-catterall.jpg);
     background-size: cover;
+}
+
+.hide {
+    display: none;
 }
 
 .jcarousel-next,
@@ -107,4 +116,107 @@ have a fixed width and height (but it's not required).
     bottom: 7px;
     right: 0;
     transform: rotate(-45deg);
+}
+
+.styled_select,
+.styled_checkbox {
+    float: left;
+    padding: 50px;
+    margin: 40px auto;
+}
+
+.selectric {
+    width: 280px;
+    line-height: 36px;
+    height: 36px;
+    border-radius: 4px;
+}
+
+.selectric-items {
+    border-radius: 4px;
+}
+
+.label,
+.selectric-items li {
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.pic {
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  height: 30px;
+  width: 30px;
+  margin: -4px 10px 0 0;
+  border-radius: 3px;
+  background-image: url(../img/josh-jones.jpg);
+  background-size: cover;
+}
+
+.pic-1 {
+    background-image: url(../img/brandon-lam.jpg);
+}
+
+.pic-2 {
+    background-image: url(../img/jack-catterall.jpg);
+}
+
+.styled_checkbox {
+    display: flex;
+    align-items: center;
+    height: 38px;
+}
+
+label {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    user-select: none;
+}
+
+.checkbox {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 10px;
+}
+
+[type="checkbox"] {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+}
+
+[type="checkbox"]:not(:disabled) {
+    cursor: pointer;
+}
+
+.checkbox_svg {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    fill: #000;
+}
+
+.unchecked {
+    display: block;
+}
+
+input:checked ~ .checked {
+    display: block;
+}
+
+input:checked ~ .unchecked {
+    display: none;
+}
+
+input:disabled ~ .checkbox_svg {
+    fill: #c7c7c7;
 }
